@@ -1,0 +1,15 @@
+{
+    "name": "Mukuro.Dialog",
+    "references": [
+        "GUID:a6d494cbe211056418cbeebd977327fc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

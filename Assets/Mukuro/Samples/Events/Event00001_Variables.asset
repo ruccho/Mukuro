@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0ffaf0888c9c248ad21efddbd459aa, type: 3}
+  m_Name: Event00001_Variables
+  m_EditorClassIdentifier: 
+  script:
+    CommandList:
+      commands:
+      - id: 0
+      - id: 1
+      - id: 2
+      - id: 3
+      - id: 4
+      - id: 5
+      - id: 6
+      - id: 7
+      - id: 8
+    WaitForAllCommands: 0
+  id: d7187963-6ba9-43e0-a8cb-6cbc2589442c
+  references:
+    version: 1
+    00000000:
+      type: {class: LogVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 3328
+        enabled: 1
+        target:
+          id: 9
+    00000001:
+      type: {class: LogVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 3328
+        enabled: 1
+        target:
+          id: 10
+    00000002:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: "\u30A4\u30D9\u30F3\u30C8\u5909\u6570<test>\u306B\u4EE3\u5165"
+    00000003:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: 
+    00000004:
+      type: {class: LogVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 6144
+        enabled: 1
+        target:
+          id: 11
+    00000005:
+      type: {class: SetVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 3328
+        enabled: 1
+        value:
+          id: 12
+        target:
+          id: 13
+    00000006:
+      type: {class: SetVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 5376
+        enabled: 1
+        value:
+          id: 14
+        target:
+          id: 15
+    00000007:
+      type: {class: LogVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 6912
+        enabled: 1
+        target:
+          id: 16
+    00000008:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: "\u4E00\u6642\u5909\u6570<test>\u306B\u4EE3\u5165"
+    00000009:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 1
+        key: test
+        constantValue: 0
+    0000000A:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 2
+        key: test
+        constantValue: 0
+    0000000B:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 2
+        key: test
+        constantValue: 0
+    0000000C:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 789
+    0000000D:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 2
+        key: test
+        constantValue: 0
+    0000000E:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 456
+    0000000F:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 1
+        key: test
+        constantValue: 0
+    00000010:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 1
+        key: test
+        constantValue: 0

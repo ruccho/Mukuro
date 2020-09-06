@@ -1,0 +1,11 @@
+{
+    "name": "io.github.ruccho.mukuro.dialog",
+    "displayName": "Mukuro Dialog",
+    "version": "0.1.0",
+    "unity": "2019.3",
+    "description": "Mukuroは拡張性と編集効率を重視したイベント編集/再生システムです。DialogパッケージにはuGUI上で使用できるメッセージや選択肢の表示機能が含まれます。",
+    "dependencies": {
+        "com.neuecc.unirx": "7.1.0",
+        "io.github.ruccho.mukuro.core" : "0.1.0"
+    }
+}

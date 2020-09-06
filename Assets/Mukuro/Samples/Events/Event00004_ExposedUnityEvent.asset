@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0ffaf0888c9c248ad21efddbd459aa, type: 3}
+  m_Name: Event00004_ExposedUnityEvent
+  m_EditorClassIdentifier: 
+  script:
+    CommandList:
+      commands:
+      - id: 0
+      - id: 1
+    WaitForAllCommands: 0
+  id: 9d30730f-5f01-4764-98bd-640e14a3f937
+  references:
+    version: 1
+    00000000:
+      type: {class: SampleEventCommand1, ns: Mukuro.Samples, asm: Assembly-CSharp}
+      data:
+        synchronization: 0
+        enabled: 1
+    00000001:
+      type: {class: ExposedUnityEventCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        ev:
+          calls:
+          - target:
+              exposedName: 78c14932a87e56943aad81b386c19c11
+              defaultValue: {fileID: 0}
+            componentTypeName: UnityEngine.Canvas
+            methodName: GetComponentInParent
+            arguments: []
+          - target:
+              exposedName: b1cf63fa5fb4ca649ba5ae2fcda7923d
+              defaultValue: {fileID: 0}
+            componentTypeName: Mukuro.Dialog.DialogModule
+            methodName: InvokeRepeating
+            arguments:
+            - id: 2
+            - id: 3
+            - id: 4
+    00000002:
+      type: {class: ExposedInvokableCallArgumentString, ns: Ruccho.Utilities, asm: io.github.ruccho.exposedunityevent}
+      data:
+        argumentLabel: methodName
+        value: 
+    00000003:
+      type: {class: ExposedInvokableCallArgumentFloat, ns: Ruccho.Utilities, asm: io.github.ruccho.exposedunityevent}
+      data:
+        argumentLabel: time
+        value: 0
+    00000004:
+      type: {class: ExposedInvokableCallArgumentFloat, ns: Ruccho.Utilities, asm: io.github.ruccho.exposedunityevent}
+      data:
+        argumentLabel: repeatRate
+        value: 0

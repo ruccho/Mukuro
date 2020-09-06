@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fef3f15a-2237-4761-a531-11a23286e3a6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/IScriptVariablesDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/IfVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogShowMessageCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableStore/RegularVariableStore.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/IfVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogShowMenuCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableReferenceTypeSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/ScriptExecutionSession.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/7d/97e1800d/Scene.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableConditionEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/SetVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableReferenceTypeSelectorEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableStore/IVariableStore.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptAsset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/LogCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/LogCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogShowMessageCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventExecutionContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventRuntimeReferenceHost.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventCommandList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/PersistentSerializedProperty/PersistentSerializedProperty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/LogVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/RegularScriptVariablesDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/ForVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/UIEventTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/e2/4f298538/BaseField`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/EventScriptEditorWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/33/c4c691d9/Debug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogSessionCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/EventCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/EventCommandUtility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableCondition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandListView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/5d/b08b32d7/PopupField`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/EventCommands/3/SampleEventCommand3.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/f9/91566521/TagField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/LogVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/MenuWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/58/c144c5a6/VisualElement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/EventCommands/3/Editor/SampleEventCommand3Editor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableReferencePropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/fa/c925c606/BindingExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/WhileVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/MessageWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/84/c48be26e/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Mukuro.Editors.asmdef" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/69/52b58051/SerializedProperty.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogShowMenuCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/WhileVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptPlayerModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/b6/8c30f352/EventCallbackFunctor`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/351E49E2-A5BF-4FD6-BEAB-B458CE2255F3/b2/cbfbcdca/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/SetVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/EventCommands/1/SampleEventCommand1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4BEC26B5-CBC7-4715-8442-F1499E984732/d4/b3cbacf6/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/ForVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/EventCommands/2/SampleEventCommand2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/EventCommands/2/Editor/SampleEventCommand2Editor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/9f/b8b4fa39/CommandExecuteContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/DialogModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/dc/216a7c6f/PropertyField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogSessionCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/Log.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/EventCommandUtility.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptAsset.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/PersistentSerializedProperty/PersistentSerializedProperty.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventCommandList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Mukuro/Samples/SerializeReferenceTest.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventRuntimeReferenceHost.cs" />
+        <option value="$PROJECT_DIR$/Assets/Mukuro/Samples/EventCommands/3/SampleEventCommand3.cs" />
+        <option value="$PROJECT_DIR$/Assets/Mukuro/Samples/UIEventTrigger.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/ScriptExecutionSession.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/IScriptVariablesDatabase.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/RegularScriptVariablesDatabase.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableStore/RegularVariableStore.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/LogCommand.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/EventCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/LogCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandItem.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/LogVariableCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableStore/IVariableStore.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/SetVariableCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VeriableCondition.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableReferencePropertyDrawer.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/IfVariableCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/SetVariableCommand.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableConditionEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventCommand.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandListView.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/WhileVariableCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableReferenceTypeSelectorEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/ForVariableCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/EventScriptEditorWindow.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/IfVariableCommand.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableCondition.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/ForVariableCommand.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableReference.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/LogVariableCommand.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/WhileVariableCommand.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableReferenceTypeSelector.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptPlayerModule.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventExecutionContext.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptPlayer.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/MessageWindow.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/DialogWindow.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/DialogModule.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogShowMessageCommand.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogShowMenuCommand.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/MenuWindow.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogSessionCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogShowMessageCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogShowMenuCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogSessionCommand.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1c53kq2Srqu1zCPMKuk3HcRjpE7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fef3f15a-2237-4761-a531-11a23286e3a6" name="Default Changelist" comment="" />
+      <created>1589804772139</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589804772139</updated>
+      <workItem from="1589804773484" duration="20902000" />
+      <workItem from="1589861074082" duration="25803000" />
+      <workItem from="1589932508858" duration="12503000" />
+      <workItem from="1590033911488" duration="23620000" />
+      <workItem from="1590130684355" duration="20452000" />
+      <workItem from="1590159531585" duration="25000" />
+      <workItem from="1590159568718" duration="2869000" />
+      <workItem from="1590169889451" duration="4765000" />
+      <workItem from="1590206615383" duration="33172000" />
+      <workItem from="1590257136935" duration="1796000" />
+      <workItem from="1590364804764" duration="25220000" />
+      <workItem from="1590413890610" duration="8417000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="WindowStateProjectService">
+    <state x="-1368" y="178" key="#Plugins" timestamp="1590159552297">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1368" y="178" key="#Plugins/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590159552297" />
+    <state width="450" height="466" key="DebuggerActiveHint" timestamp="1590159847259">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="450" height="466" key="DebuggerActiveHint/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590159847259" />
+    <state width="938" height="192" key="GridCell.Tab.0.bottom" timestamp="1590162440225">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440225" />
+    <state width="938" height="192" key="GridCell.Tab.0.center" timestamp="1590162440225">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440225" />
+    <state width="938" height="192" key="GridCell.Tab.0.left" timestamp="1590162440225">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440225" />
+    <state width="938" height="192" key="GridCell.Tab.0.right" timestamp="1590162440225">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440225" />
+    <state width="938" height="192" key="GridCell.Tab.1.bottom" timestamp="1590162440225">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440225" />
+    <state width="938" height="192" key="GridCell.Tab.1.center" timestamp="1590162440225">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440225" />
+    <state width="938" height="192" key="GridCell.Tab.1.left" timestamp="1590162440225">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440225" />
+    <state width="938" height="192" key="GridCell.Tab.1.right" timestamp="1590162440225">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440225" />
+    <state width="938" height="192" key="GridCell.Tab.2.bottom" timestamp="1590162440225">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440225" />
+    <state width="938" height="192" key="GridCell.Tab.2.center" timestamp="1590162440225">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440225" />
+    <state width="938" height="192" key="GridCell.Tab.2.left" timestamp="1590162440225">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440225" />
+    <state width="938" height="192" key="GridCell.Tab.2.right" timestamp="1590162440225">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440225" />
+    <state width="938" height="192" key="GridCell.Tab.3.bottom" timestamp="1590162440226">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440226" />
+    <state width="938" height="192" key="GridCell.Tab.3.center" timestamp="1590162440226">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.3.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440226" />
+    <state width="938" height="192" key="GridCell.Tab.3.left" timestamp="1590162440226">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.3.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440226" />
+    <state width="938" height="192" key="GridCell.Tab.3.right" timestamp="1590162440226">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="192" key="GridCell.Tab.3.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590162440226" />
+    <state x="668" y="235" key="RiderGenerateDialog" timestamp="1590217658280">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1252" y="235" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589932994800" />
+    <state x="668" y="235" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1590217658280" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1590132773650">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1590132773650" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1590421795848">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590389664610" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1590421795848" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/ScriptExecutionSession.cs</url>
+          <line>50</line>
+          <properties documentPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/ScriptExecutionSession.cs" initialLine="50">
+            <startOffsets>
+              <option value="1743" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1757" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/ScriptExecutionSession.cs</url>
+          <line>64</line>
+          <properties documentPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/ScriptExecutionSession.cs" initialLine="64">
+            <startOffsets>
+              <option value="2088" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2124" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

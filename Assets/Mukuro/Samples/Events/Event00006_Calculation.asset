@@ -1,0 +1,248 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0ffaf0888c9c248ad21efddbd459aa, type: 3}
+  m_Name: Event00006_Calculation
+  m_EditorClassIdentifier: 
+  script:
+    CommandList:
+      commands:
+      - id: 0
+      - id: 1
+      - id: 2
+      - id: 3
+      - id: 4
+      - id: 5
+      - id: 6
+      - id: 7
+      - id: 8
+      - id: 9
+      - id: 10
+    WaitForAllCommands: 0
+  id: 442ef6d9-d5cb-4f7a-9ff4-f7f18f996fe3
+  references:
+    version: 1
+    00000000:
+      type: {class: CalculationCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        calculation:
+          left:
+            id: 11
+          right0:
+            id: 12
+          right1:
+            id: 13
+          calculationOperator: 0
+    00000001:
+      type: {class: LogVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        target:
+          id: 14
+    00000002:
+      type: {class: DialogSessionCommand, ns: Mukuro.Dialog, asm: Mukuro.Dialog}
+      data:
+        synchronization: 0
+        enabled: 1
+        providerName: 
+        commandList:
+          commands:
+          - id: 15
+          - id: 16
+    00000003:
+      type: {class: CalculationCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        calculation:
+          left:
+            id: 17
+          right0:
+            id: 18
+          right1:
+            id: 19
+          calculationOperator: 0
+    00000004:
+      type: {class: SetVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        value:
+          id: 20
+        target:
+          id: 21
+    00000005:
+      type: {class: ForVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        waitForAllCommand: 0
+        count:
+          variable:
+            id: 22
+        routine:
+          commands: []
+    00000006:
+      type: {class: IfVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        waitForAllCommand: 0
+        condition:
+          left:
+            id: 23
+          right:
+            id: 24
+          conditionOperator: 0
+        ifTrue:
+          commands: []
+        ifFalse:
+          commands: []
+    00000007:
+      type: {class: WhileVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        waitForAllCommand: 0
+        condition:
+          left:
+            id: 25
+          right:
+            id: 26
+          conditionOperator: 0
+        routine:
+          commands: []
+    00000008:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: 
+    00000009:
+      type: {class: WaitCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        updateMode: 0
+        duration:
+          storeType: 0
+          key: 
+          constantValue: 0
+    0000000A:
+      type: {class: ExposedUnityEventCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        ev:
+          calls: []
+    0000000B:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 1
+        key: result
+        constantValue: 0
+    0000000C:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 10
+    0000000D:
+      type: {class: FloatVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 100
+    0000000E:
+      type: {class: FloatVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 1
+        key: result
+        constantValue: 0
+    0000000F:
+      type: {class: DialogShowMenuCommand, ns: Mukuro.Dialog, asm: Mukuro.Dialog}
+      data:
+        synchronization: 0
+        enabled: 1
+        bifurcations: []
+    00000010:
+      type: {class: DialogShowMessageCommand, ns: Mukuro.Dialog, asm: Mukuro.Dialog}
+      data:
+        synchronization: 0
+        enabled: 1
+        speaker: {fileID: 0}
+        face: 
+        message: 
+        allowSpeedUp: 1
+        allowSkipping: 1
+    00000011:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 0
+    00000012:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 0
+    00000013:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 0
+    00000014:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 0
+    00000015:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 0
+    00000016:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 0
+    00000017:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 0
+    00000018:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 0
+    00000019:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 0
+    0000001A:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 0

@@ -1,0 +1,23 @@
+{
+    "name": "Mukuro.Editors",
+    "references": [
+        "Mukuro"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "Select...",
+            "expression": "",
+            "define": ""
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Mukuro",
+    "references": [
+        "GUID:85da408dd20827c4a8ee4f775ac296d8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

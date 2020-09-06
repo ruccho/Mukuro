@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="CommandItem" style="flex-direction: row; padding-top: 3px; padding-bottom: 3px; color: rgba(196, 196, 196, 255);">
+        <ui:Toggle name="CommandEnabled" style="position: relative; width: 15px; height: 15px;" />
+        <ui:VisualElement name="CommandDetail" style="flex-grow: 1; flex-direction: column;">
+            <ui:VisualElement style="flex-direction: row;">
+                <ui:VisualElement name="CommandIcon" style="width: 16px; height: 16px;" />
+                <ui:Label text="コマンドテンプレート" name="CommandLabel" style="flex-grow: 0; height: 15px; overflow: hidden;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="CommandCustomDetailContent" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

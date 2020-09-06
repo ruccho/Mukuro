@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\nobor\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\nobor\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Mukuro_Develop.313051015.00" t="ExcludeRecursive" />
+    <e p="C:\Users\nobor\Documents\development\repositories\Mukuro\Mukuro_Develop" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Mukuro" t="Include">
+          <e p="Samples" t="Include">
+            <e p="EventCommands" t="Include">
+              <e p="1" t="Include">
+                <e p="SampleEventCommand1.cs" t="Include" />
+              </e>
+              <e p="2" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="SampleEventCommand2Editor.cs" t="Include" />
+                </e>
+                <e p="SampleEventCommand2.cs" t="Include" />
+              </e>
+              <e p="3" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="SampleEventCommand3Editor.cs" t="Include" />
+                </e>
+                <e p="SampleEventCommand3.cs" t="Include" />
+              </e>
+            </e>
+            <e p="UIEventTrigger.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Mukuro.csproj" t="IncludeRecursive" />
+      <e p="Mukuro.Dialog.csproj" t="IncludeRecursive" />
+      <e p="Mukuro.Dialog.Editors.csproj" t="IncludeRecursive" />
+      <e p="Mukuro.Editors.csproj" t="IncludeRecursive" />
+      <e p="Mukuro_Develop.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive">
+        <e p="io.github.ruccho.mukuro.core" t="Include">
+          <e p="Editor" t="Include">
+            <e p="Layout" t="Include">
+              <e p="CommandItem.uxml" t="Include" />
+              <e p="EventScriptAsset.uxml" t="Include" />
+              <e p="EventScriptEditor.uxml" t="Include" />
+              <e p="VariableCondition.uxml" t="Include" />
+            </e>
+            <e p="Mukuro.Editors.asmdef" t="Include" />
+            <e p="PersistentSerializedProperty" t="Include">
+              <e p="PersistentSerializedProperty.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="CommandEditors" t="Include">
+                <e p="ForVariableCommandEditor.cs" t="Include" />
+                <e p="IfVariableCommandEditor.cs" t="Include" />
+                <e p="LogCommandEditor.cs" t="Include" />
+                <e p="LogVariableCommandEditor.cs" t="Include" />
+                <e p="SetVariableCommandEditor.cs" t="Include" />
+                <e p="WhileVariableCommandEditor.cs" t="Include" />
+              </e>
+              <e p="CommandItem.cs" t="Include" />
+              <e p="CommandListView.cs" t="Include" />
+              <e p="CustomEventCommandEditorAttribute.cs" t="Include" />
+              <e p="EventCommandEditor.cs" t="Include" />
+              <e p="EventCommandUtility.cs" t="Include" />
+              <e p="EventScriptAssetEditor.cs" t="Include" />
+              <e p="EventScriptEditorWindow.cs" t="Include" />
+              <e p="VariableConditionEditor.cs" t="Include" />
+              <e p="VariableReferencePropertyDrawer.cs" t="Include" />
+              <e p="VariableReferenceTypeSelectorEditor.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Runtime" t="Include">
+            <e p="Mukuro.asmdef" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="CommandExecutionHandle.cs" t="Include" />
+              <e p="Commands" t="Include">
+                <e p="ForVariableCommand.cs" t="Include" />
+                <e p="IfVariableCommand.cs" t="Include" />
+                <e p="LogCommand.cs" t="Include" />
+                <e p="LogVariableCommand.cs" t="Include" />
+                <e p="SetVariableCommand.cs" t="Include" />
+                <e p="WhileVariableCommand.cs" t="Include" />
+              </e>
+              <e p="EventCommand.cs" t="Include" />
+              <e p="EventCommandAttribute.cs" t="Include" />
+              <e p="EventCommandList.cs" t="Include" />
+              <e p="EventExecutionContext.cs" t="Include" />
+              <e p="EventRuntimeReferenceHost.cs" t="Include" />
+              <e p="EventScript.cs" t="Include" />
+              <e p="EventScriptAsset.cs" t="Include" />
+              <e p="EventScriptPlayer.cs" t="Include" />
+              <e p="EventScriptPlayerModule.cs" t="Include" />
+              <e p="IScriptVariablesDatabase.cs" t="Include" />
+              <e p="RegularScriptVariablesDatabase.cs" t="Include" />
+              <e p="ScriptExecutionSession.cs" t="Include" />
+              <e p="VariableCondition.cs" t="Include" />
+              <e p="VariableReference.cs" t="Include" />
+              <e p="VariableReferenceTypeSelector.cs" t="Include" />
+              <e p="VariableStore" t="Include">
+                <e p="IVariableStore.cs" t="Include" />
+                <e p="RegularVariableStore.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="io.github.ruccho.mukuro.dialog" t="Include">
+          <e p="Editor" t="Include">
+            <e p="Mukuro" t="Include">
+              <e p="CommandEditors" t="Include">
+                <e p="DialogSessionCommandEditor.cs" t="Include" />
+                <e p="DialogShowMenuCommandEditor.cs" t="Include" />
+                <e p="DialogShowMessageCommandEditor.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Mukuro.Dialog.Editors.asmdef" t="Include" />
+          </e>
+          <e p="Runtime" t="Include">
+            <e p="Mukuro" t="Include">
+              <e p="Commands" t="Include">
+                <e p="DialogSessionCommand.cs" t="Include" />
+                <e p="DialogShowMenuCommand.cs" t="Include" />
+                <e p="DialogShowMessageCommand.cs" t="Include" />
+              </e>
+              <e p="Dialog" t="Include">
+                <e p="DialogModule.cs" t="Include" />
+                <e p="MenuWindow.cs" t="Include" />
+                <e p="MessageWindow.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Mukuro.Dialog.asmdef" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

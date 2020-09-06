@@ -1,0 +1,204 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0ffaf0888c9c248ad21efddbd459aa, type: 3}
+  m_Name: Event00002_ControlExpressions
+  m_EditorClassIdentifier: 
+  script:
+    CommandList:
+      commands:
+      - id: 0
+      - id: 1
+      - id: 2
+      - id: 3
+      - id: 4
+      - id: 5
+      - id: 6
+    WaitForAllCommands: 0
+  id: ad84fb5f-ca29-4430-98fa-091a7d5b2834
+  references:
+    version: 1
+    00000000:
+      type: {class: SetVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        value:
+          id: 7
+        target:
+          id: 8
+    00000001:
+      type: {class: LogVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        target:
+          id: 9
+    00000002:
+      type: {class: IfVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        waitForAllCommand: 0
+        condition:
+          left:
+            id: 10
+          right:
+            id: 11
+          conditionOperator: 1
+        ifTrue:
+          commands:
+          - id: 12
+        ifFalse:
+          commands:
+          - id: 13
+    00000003:
+      type: {class: SetVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        value:
+          id: 14
+        target:
+          id: 15
+    00000004:
+      type: {class: LogVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        target:
+          id: 16
+    00000005:
+      type: {class: IfVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        waitForAllCommand: 0
+        condition:
+          left:
+            id: 17
+          right:
+            id: 18
+          conditionOperator: 1
+        ifTrue:
+          commands:
+          - id: 19
+        ifFalse:
+          commands:
+          - id: 20
+    00000006:
+      type: {class: ForVariableCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        waitForAllCommand: 0
+        count:
+          variable:
+            id: 21
+        routine:
+          commands:
+          - id: 22
+    00000007:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 0
+    00000008:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 1
+        key: test
+        constantValue: 0
+    00000009:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 1
+        key: test
+        constantValue: 0
+    0000000A:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 1
+        key: test
+        constantValue: 0
+    0000000B:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 1
+    0000000C:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: TRUE!
+    0000000D:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: FALSE!
+    0000000E:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 1
+    0000000F:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 1
+        key: test
+        constantValue: 0
+    00000010:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 1
+        key: test
+        constantValue: 0
+    00000011:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 1
+        key: test
+        constantValue: 0
+    00000012:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 1
+    00000013:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: TRUE!
+    00000014:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: FALSE!
+    00000015:
+      type: {class: IntVariableReference, ns: Mukuro, asm: Mukuro}
+      data:
+        storeType: 0
+        key: 
+        constantValue: 10
+    00000016:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: "for\u306B\u3088\u308B\u7E70\u308A\u8FD4\u3057\u4E2D\u2026\u2026"

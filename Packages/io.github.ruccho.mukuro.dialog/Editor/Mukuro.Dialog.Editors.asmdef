@@ -1,0 +1,19 @@
+{
+    "name": "Mukuro.Dialog.Editors",
+    "references": [
+        "GUID:1e517f7f9fc56204195783df4e167908",
+        "GUID:a6d494cbe211056418cbeebd977327fc",
+        "GUID:6eb9983b744b93e4a92a4d412ff79b40"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

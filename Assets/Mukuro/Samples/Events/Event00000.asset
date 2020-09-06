@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0ffaf0888c9c248ad21efddbd459aa, type: 3}
+  m_Name: Event00000
+  m_EditorClassIdentifier: 
+  script:
+    CommandList:
+      commands:
+      - id: 0
+      - id: 1
+      - id: 2
+      - id: 3
+      - id: 4
+    WaitForAllCommands: 0
+  id: bb2e7e8e-c268-4c5e-80fb-7d9e6c6f46e3
+  references:
+    version: 1
+    00000000:
+      type: {class: SampleEventCommand2, ns: Mukuro.Samples, asm: Assembly-CSharp}
+      data:
+        synchronization: 0
+        enabled: 1
+        sampleString: 
+        targetGameObject:
+          exposedName: 
+          defaultValue: {fileID: 0}
+    00000001:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: "\u30CD\u30B9\u30C8\u3055\u308C\u3066\u307E\u3059\u2026\u2026"
+    00000002:
+      type: {class: SampleEventCommand3, ns: Mukuro.Samples, asm: Assembly-CSharp}
+      data:
+        synchronization: 0
+        enabled: 1
+        commandList:
+          commands:
+          - id: 5
+    00000003:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: Test Message
+    00000004:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: "\u304A\u3057\u307E\u3044\uFF01"
+    00000005:
+      type: {class: SampleEventCommand3, ns: Mukuro.Samples, asm: Assembly-CSharp}
+      data:
+        synchronization: 0
+        enabled: 1
+        commandList:
+          commands:
+          - id: 6
+          - id: 7
+    00000006:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: "\u304A\u3057\u307E\u3044\uFF01"
+    00000007:
+      type: {class: SampleEventCommand3, ns: Mukuro.Samples, asm: Assembly-CSharp}
+      data:
+        synchronization: 0
+        enabled: 1
+        commandList:
+          commands:
+          - id: 8
+    00000008:
+      type: {class: SampleEventCommand3, ns: Mukuro.Samples, asm: Assembly-CSharp}
+      data:
+        synchronization: 0
+        enabled: 1
+        commandList:
+          commands:
+          - id: 9
+    00000009:
+      type: {class: SampleEventCommand3, ns: Mukuro.Samples, asm: Assembly-CSharp}
+      data:
+        synchronization: 0
+        enabled: 1
+        commandList:
+          commands: []
