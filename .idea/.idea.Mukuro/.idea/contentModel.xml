@@ -15,9 +15,7 @@
       <e p="io.github.ruccho.exposedunityevent.asmdef" t="Include" />
       <e p="Scripts" t="Include">
         <e p="ExposedInvokableCall.cs" t="Include" />
-        <e p="ExposedUnityAction.cs" t="Include" />
         <e p="ExposedUnityEvent.cs" t="Include" />
-        <e p="PersistentCall.cs" t="Include" />
         <e p="TypeRestrictedExposedReferenceAttribute.cs" t="Include" />
       </e>
     </e>
