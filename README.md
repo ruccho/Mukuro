@@ -34,7 +34,7 @@ MukuroのパッケージはUnity Package Manager (UPM) 形式で公開してい�
 ```
 
 ### イベントスクリプトの作成
-1. Projectビューで右クリック > Create > Mukuro > CommandScriptでイベントを記述するアセットを作成できます。
+1. Projectビューで右クリック > Create > Mukuro > EventScriptでイベントを記述するアセットを作成できます。
 2. 作成したアセットのInspectorからイベントスクリプトエディタウィンドウを起動できます。
 
 ![image](https://user-images.githubusercontent.com/16096562/92329330-bf69bc00-f0a1-11ea-9623-cbc496050f87.png)
@@ -50,6 +50,7 @@ MukuroのパッケージはUnity Package Manager (UPM) 形式で公開してい�
 2. 以下のスクリプトを作成し適当なGameObjectにアタッチします：
 ```csharp
 using UnityEngine;
+using Mukuro;
 
 public class MukuroEventPlayerSample : MonoBehaviour
 {
@@ -58,7 +59,10 @@ public class MukuroEventPlayerSample : MonoBehaviour
     
     public void Play()
     {
-        player.Play(script, gameObject.scene);
+        player.Play(new EventPlayingOption(script)
+        {
+            SceneForRuntimeReference = gameObject.scene
+        });
     }
 }
 ```
