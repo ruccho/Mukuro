@@ -31,7 +31,7 @@ namespace Mukuro
                     entry = new TimerEntry(Time.time + time, UpdateModeType.Scaled, tick);
                     break;
                 case UpdateModeType.Unscaled:
-                    entry = new TimerEntry(Time.unscaledTime + time, UpdateModeType.Scaled, tick);
+                    entry = new TimerEntry(Time.unscaledTime + time, UpdateModeType.Unscaled, tick);
                     break;
                 default:
                     throw new NotImplementedException();

@@ -18,15 +18,25 @@ namespace Mukuro.Dialog
                 return;
             }
 
-            var providerName = dialog.CurrentProvider.ProviderName;
+            if (dialog.CurrentProvider != null)
+            {
+                var providerName = dialog.CurrentProvider.ProviderName;
 
-            dialog.Close(() =>
+                dialog.Close(() =>
+                {
+                    var script = new EventScript();
+                    script.CommandList = commandList;
+                    script.WaitForAllCommands = true;
+                    context.InsertInherit(script, () => { dialog.Open(providerName, handle.Complete); });
+                });
+            }
+            else
             {
                 var script = new EventScript();
                 script.CommandList = commandList;
                 script.WaitForAllCommands = true;
-                context.InsertInherit(script, () => { dialog.Open(providerName, handle.Complete); });
-            });
+                context.InsertInherit(script, handle.Complete);
+            }
         }
     }
 }

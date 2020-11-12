@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Mukuro.Samples
 {
-    public class TalkStyleDialogProvider : DialogProvider
+    public class TalkStyleDialogProvider : DialogProviderBase
     {
         [SerializeField] private int maxPopCount = 20;
         [SerializeField] private RectTransform popParent = default;

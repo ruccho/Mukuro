@@ -137,6 +137,9 @@ namespace Mukuro.Dialog.Editors
                 var labelText = new TextField();
                 labelText.bindingPath = item.FindPropertyRelative("label").propertyPath;
                 labelText.style.flexGrow = new StyleFloat(1f);
+                
+                labelText.RegisterCallback<FocusInEvent>(evt => { Input.imeCompositionMode = IMECompositionMode.On; });
+                labelText.RegisterCallback<FocusOutEvent>(evt => { Input.imeCompositionMode = IMECompositionMode.Auto; });
                 b.Add(labelText);
 
                 int index = i;

@@ -124,20 +124,28 @@ namespace Mukuro.Dialog
 
         private async Task LoadFaceSpriteAsync(DialogShowMessageSettings settings, CancellationToken cancellationToken)
         {
-            Sprite loaded = null;
-            if (settings.SpeakerInfo != null)
+            try
             {
-                loaded = await settings.SpeakerInfo.GetFaceSpriteAsync(settings.Face, cancellationToken);
+                Sprite loaded = null;
+                if (settings.SpeakerInfo != null)
+                {
+                    loaded = await settings.SpeakerInfo.GetFaceSpriteAsync(settings.Face, cancellationToken);
+                }
+
+                Debug.Log("Loaded");
+
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    return;
+                }
+
+                SetFaceSprite(loaded);
             }
-
-            Debug.Log("Loaded");
-
-            if (cancellationToken.IsCancellationRequested)
+            catch (Exception e)
             {
-                return;
+                Debug.LogException(e);
+                throw;
             }
-
-            SetFaceSprite(loaded);
 
         }
 

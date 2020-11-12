@@ -64,7 +64,7 @@ namespace Mukuro.Editors
             //aField.bindingPath = property.FindPropertyRelative("left").propertyPath;
             //bField.bindingPath = property.FindPropertyRelative("right").propertyPath;
 
-            var operatorButton = root.Q<Button>("OperatorButton");;
+            var operatorButton = root.Q<Button>("OperatorButton");
             var operatorProp = property.FindPropertyRelative("conditionOperator");
             int operatorEnumValueIndex = operatorProp.enumValueIndex;
             var operatorEnumValue = Enum.GetValues(typeof(ConditionOperatorType)).GetValue(operatorEnumValueIndex);

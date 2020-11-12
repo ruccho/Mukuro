@@ -15,6 +15,8 @@ namespace Mukuro
         Type GetValueType(string key);
 
         IEnumerable<string> KeyEntries { get; }
+
+        SubscriptionHandle SubscribeOnUpdated<T>(string key, Action<T> onUpdated);
     }
 
     public static class VariableStoreExtension

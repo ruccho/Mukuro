@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using Mukuro.Editors;
 using UnityEditor;
@@ -12,6 +11,16 @@ namespace Mukuro.Dialog.Editors
     [CustomEventCommandEditor(typeof(DialogShowMessageCommand))]
     public class DialogShowMessageCommandEditor : EventCommandEditor
     {
+        private static Type[] DialogShowMessageSettingsTypes;
+
+        [InitializeOnLoadMethod]
+        private static void GatherSettingsTypes()
+        {
+            var t_dialogProviderBase = typeof(DialogShowMessageSettings);
+            DialogShowMessageSettingsTypes = AppDomain.CurrentDomain.GetAssemblies().SelectMany(a =>
+                a.GetTypes().Where(t => t.IsSubclassOf(t_dialogProviderBase) && !t.IsAbstract)).ToArray();
+        }
+
         private static Texture2D Icon { get; set; }
 
         private static void EnsureIconLoaded()
@@ -28,9 +37,18 @@ namespace Mukuro.Dialog.Editors
 
         public override string GetLabelText()
         {
-            var message = CommandItem.CommandProperty.GetProperty().FindPropertyRelative("message").stringValue;
-            message = message.Replace('\n', ' ');
-            return $"メッセージの表示：「{message}」";
+            var settingsProp = CommandItem.CommandProperty.GetProperty().FindPropertyRelative("settings");
+            var messageProp = settingsProp.FindPropertyRelative("message");
+            if (messageProp != null)
+            {
+                var message = messageProp.stringValue;
+                message = message.Replace('\n', ' ');
+                return $"{message}";
+            }
+            else
+            {
+                return "";
+            }
         }
 
         public override Color? GetLabelColor()
@@ -61,43 +79,110 @@ namespace Mukuro.Dialog.Editors
         {
             var commandProp = CommandItem.CommandProperty.GetProperty();
 
-            var message = new TextField();
-            message.multiline = true;
-            message.label = "メッセージ";
-            message.bindingPath = commandProp.FindPropertyRelative("message").propertyPath;
-            root.Add(message);
 
-            var speaker = new ObjectField("話者");
-            speaker.objectType = typeof(SpeakerInfoAsset);
-            speaker.bindingPath =
-                commandProp.FindPropertyRelative("speaker").propertyPath;
-            root.Add(speaker);
+            //DialogShowMessageSettings
+            var settingsProp = commandProp.FindPropertyRelative("settings");
 
-            var face = BuildFaceField();
-            root.Add(face);
-            var faceIndex = root.IndexOf(face);
-            
+            var settingsTypeInfo = settingsProp.managedReferenceFullTypename.Split(' ');
+            string settingsTypeName = "";
+            if (settingsTypeInfo.Length >= 2)
+            {
+                settingsTypeName = settingsTypeInfo[1];
+            }
+            else
+            {
+                settingsProp.managedReferenceValue = new DialogShowMessageSettings();
+                settingsProp.serializedObject.ApplyModifiedProperties();
+                settingsTypeName = typeof(DialogShowMessageSettings).FullName;
+            }
 
-            var allowSpeedUp = new PropertyField();
-            allowSpeedUp.label = "文字送り加速を許可";
-            allowSpeedUp.bindingPath =
-                commandProp.FindPropertyRelative("allowSpeedUp").propertyPath;
-            root.Add(allowSpeedUp);
+            var settingsField = new VisualElement();
 
-            var allowSkipping = new PropertyField();
-            allowSkipping.label = "文字送りスキップを許可";
-            allowSkipping.bindingPath =
-                commandProp.FindPropertyRelative("allowSkipping").propertyPath;
-            root.Add(allowSkipping);
+            var settingsButton = new Button();
+            settingsButton.text = settingsTypeName.Split('.').Last();
+            settingsButton.clickable.clicked += () => SettingsTypeMenu(settingsButton, settingsField);
 
+            var settingsTypeBox = new VisualElement();
+            settingsTypeBox.style.flexDirection = new StyleEnum<FlexDirection>(FlexDirection.Row);
+            settingsTypeBox.Add(new Label("Settings Type"));
+            settingsTypeBox.Add(settingsButton);
+
+            root.Add(settingsTypeBox);
+
+            UpdateSettingsField(settingsField);
+
+            root.Add(settingsField);
 
             root.Bind(CommandItem.CommandProperty.SerializedObject);
-            speaker.RegisterValueChangedCallback((e) =>
+        }
+
+        private void UpdateSettingsField(VisualElement settingsField)
+        {
+            var root = settingsField;
+            root.Clear();
+
+            var commandProp = CommandItem.CommandProperty.GetProperty();
+            var settingsProp = commandProp.FindPropertyRelative("settings");
+            root.Add(new PropertyField() {bindingPath = settingsProp.propertyPath});
+            /*if (settingsProp.hasChildren)
             {
-                root.RemoveAt(faceIndex);
-                root.Insert(faceIndex, BuildFaceField());
-                
-            });
+                int rootDepth = settingsProp.depth;
+                settingsProp.NextVisible(true);
+
+                do
+                {
+                    PropertyField propertyField = new PropertyField();
+                    propertyField.bindingPath = settingsProp.propertyPath;
+                    root.Add(propertyField);
+                } while (settingsProp.NextVisible(false) && settingsProp.depth > rootDepth);
+            }*/
+            root.Bind(CommandItem.CommandProperty.SerializedObject);
+        }
+
+        private void SettingsTypeMenu(Button settingsButton, VisualElement settingsField)
+        {
+            var commandProp = CommandItem.CommandProperty.GetProperty();
+            var settingsProp = commandProp.FindPropertyRelative("settings");
+            var settingsTypeInfo = settingsProp.managedReferenceFullTypename.Split(' ');
+            string settingsTypeName = "";
+            if (settingsTypeInfo.Length >= 2)
+            {
+                settingsTypeName = settingsTypeInfo[1];
+            }
+            else
+            {
+                settingsProp.managedReferenceValue = new DialogShowMessageSettings();
+                settingsProp.serializedObject.ApplyModifiedProperties();
+                settingsTypeName = typeof(DialogShowMessageSettings).FullName;
+            }
+
+            var settingsMenu = new GenericMenu();
+            settingsMenu.AddItem(new GUIContent(nameof(DialogShowMessageSettings)),
+                settingsTypeName == typeof(DialogShowMessageSettings).FullName, () =>
+                {
+                    settingsButton.text = nameof(DialogShowMessageSettings);
+                    SetSettings(new DialogShowMessageSettings(), settingsField);
+                });
+            settingsMenu.AddSeparator("");
+            foreach (var t in DialogShowMessageSettingsTypes)
+            {
+                settingsMenu.AddItem(new GUIContent(t.Name), settingsTypeName == t.FullName, () =>
+                {
+                    settingsButton.text = t.Name.Split('.').Last();
+                    SetSettings((DialogShowMessageSettings) Activator.CreateInstance(t), settingsField);
+                });
+            }
+
+            settingsMenu.DropDown(settingsButton.worldBound);
+        }
+
+        private void SetSettings(DialogShowMessageSettings settings, VisualElement settingsField)
+        {
+            var commandProp = CommandItem.CommandProperty.GetProperty();
+            var settingsProp = commandProp.FindPropertyRelative("settings");
+            settingsProp.managedReferenceValue = settings;
+            settingsProp.serializedObject.ApplyModifiedProperties();
+            UpdateSettingsField(settingsField);
         }
 
         private VisualElement BuildFaceField()
@@ -111,7 +196,7 @@ namespace Mukuro.Dialog.Editors
                 p.bindingPath = commandProp.FindPropertyRelative("face").propertyPath;
                 return p;
             }
-            
+
             var faces = speakerInfo.SpeakerInfo.Faces.ToList();
             faces.Insert(0, "<Missing>");
             var currentFaceProp = commandProp.FindPropertyRelative("face");
@@ -120,6 +205,15 @@ namespace Mukuro.Dialog.Editors
             if (faces.Contains(currentFace))
             {
                 currentFaceIndex = faces.IndexOf(currentFace);
+            }
+            else
+            {
+                if (faces.Count >= 2)
+                {
+                    currentFaceIndex = 1;
+                    currentFaceProp.stringValue = faces[1];
+                    currentFaceProp.serializedObject.ApplyModifiedProperties();
+                }
             }
 
             var face = new PopupField<string>(faces, currentFaceIndex);

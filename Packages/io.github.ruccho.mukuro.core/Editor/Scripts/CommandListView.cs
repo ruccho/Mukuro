@@ -240,7 +240,7 @@ namespace Mukuro.Editors
                     dest.boolValue = source.boolValue;
                     break;
                 case SerializedPropertyType.Float:
-                    dest.boolValue = source.boolValue;
+                    dest.floatValue = source.floatValue;
                     break;
                 case SerializedPropertyType.String:
                     dest.stringValue = source.stringValue;

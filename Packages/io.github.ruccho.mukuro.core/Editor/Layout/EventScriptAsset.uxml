@@ -2,4 +2,6 @@
     <ui:VisualElement>
         <ui:Button text="Open" name="OpenButton" />
     </ui:VisualElement>
+    <ui:TextField picking-mode="Ignore" label="EventScriptAsset ID" readonly="true" name="IDField" />
+    <ui:Button text="Regenerate ID" name="RegenerateIDButton" />
 </ui:UXML>

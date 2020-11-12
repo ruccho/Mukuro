@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Mukuro.Dialog
 {
-    public class RegularWindowedDialogProvider : DialogProvider
+    public class RegularWindowedDialogProvider : DialogProviderBase
     {
         [SerializeField] private MessageWindowBase messageWindow = default;
         [SerializeField] private MenuWindowBase menuWindow = default;

@@ -9,9 +9,9 @@ namespace Mukuro
     [Serializable]
     public class VariableCalculation
     {
-        [SerializeReference, VariableReference.TypeSelectableAttribute] private VariableReference left;
-        [SerializeReference, VariableReference.TypeSelectableAttribute] private VariableReference right0;
-        [SerializeReference, VariableReference.TypeSelectableAttribute] private VariableReference right1;
+        [SerializeReference, VariableReference.TypeSelectableAttribute] private VariableReference left = default;
+        [SerializeReference, VariableReference.TypeSelectableAttribute] private VariableReference right0 = default;
+        [SerializeReference, VariableReference.TypeSelectableAttribute] private VariableReference right1 = default;
         
         [SerializeField] private CalculationOperatorType calculationOperator = CalculationOperatorType.Add;
         

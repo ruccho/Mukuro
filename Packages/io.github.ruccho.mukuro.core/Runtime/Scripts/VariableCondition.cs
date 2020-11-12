@@ -63,6 +63,34 @@ namespace Mukuro
                 return false;
             }
         }
+
+        public SubscriptionHandle SubscribeOnUpdatedEventVariables(IVariableStore store, Action onUpdated)
+        {
+            if(right == null || left == null) throw new NullReferenceException("式が不正です。");
+            if (left.StoreType == VariableReferenceType.Temporary || right.StoreType == VariableReferenceType.Temporary)
+            {
+                Debug.LogError("一時変数を含むConditionのウォッチは出来ません");
+                return SubscriptionHandle.Empty;
+            }
+
+            SubscriptionHandle leftHandle = SubscriptionHandle.Empty;
+            SubscriptionHandle rightHandle = SubscriptionHandle.Empty;
+            ;
+            if (left.StoreType == VariableReferenceType.Event)
+            {
+                leftHandle = store.SubscribeOnUpdated<object>(left.Key, _ => onUpdated());
+            }
+            
+            if (right.StoreType == VariableReferenceType.Event)
+            {
+                rightHandle = store.SubscribeOnUpdated<object>(right.Key, _ => onUpdated());
+            }
+            return new SubscriptionHandle(() =>
+            {
+                leftHandle.Dispose();
+                rightHandle.Dispose();
+            });
+        }
     }
 
     public enum ConditionOperatorType

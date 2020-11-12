@@ -238,7 +238,9 @@ namespace Mukuro.Editors
             if (defaultBackgroundColor == default)
                 defaultBackgroundColor = this.style.backgroundColor.value;
             this.style.backgroundColor = new StyleColor(new Color(0.172549f, 0.3647059f, 0.5294118f));
-            UpdateCommandDetail();
+            
+            Editor?.OnUpdate();
+            //UpdateCommandDetail();
         }
 
         public void OnDeselected()

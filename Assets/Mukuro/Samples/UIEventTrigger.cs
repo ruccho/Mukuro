@@ -11,7 +11,10 @@ namespace Mukuro.Samples
         
         public void Play()
         {
-            player.Play(script, gameObject.scene);
+            player.Play(new EventPlayingOption(script)
+            {
+                SceneForRuntimeReference = gameObject.scene
+            });
         }
     }
 }

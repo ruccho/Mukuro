@@ -8,7 +8,7 @@ namespace Mukuro
     public class WaitCommand : EventCommand
     {
         [SerializeField] private Timer.UpdateModeType updateMode = Timer.UpdateModeType.Scaled;
-        [SerializeField] private FloatVariableReference duration;
+        [SerializeField] private FloatVariableReference duration = default;
 
         private CommandExecutionHandle currentHandle;
         public override void Execute(EventExecutionContext context, CommandExecutionHandle handle)
@@ -26,7 +26,6 @@ namespace Mukuro
 
         private void Tick()
         {
-            Debug.Log("Elapsed!");
             currentHandle.Complete();
         }
     }

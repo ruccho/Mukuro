@@ -71,10 +71,14 @@ namespace Mukuro
         private static void EnsureInitialized()
         {
             if (isInitialized) return;
-            isInitialized = true;
             SceneManager.sceneLoaded += (s, m) => AddSceneEntry(s);
             SceneManager.sceneUnloaded += RemoveSceneEntry;
-            
+            isInitialized = true;
+        }
+
+        static EventRuntimeReferenceHostRegistry()
+        {
+            EnsureInitialized();
         }
 
         private static void AddSceneEntry(Scene scene)

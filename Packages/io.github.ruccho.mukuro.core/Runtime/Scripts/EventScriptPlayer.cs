@@ -6,26 +6,32 @@ using UnityEngine.SceneManagement;
 
 namespace Mukuro
 {
-    public class EventScriptPlayer : MonoBehaviour
+
+    public abstract class EventScriptPlayerBase : MonoBehaviour
     {
+        
         [SerializeField] protected bool showDebugGui = false;
 
         [SerializeField] protected List<EventScriptPlayerModule> modules;
 
-        protected Dictionary<Type, EventScriptPlayerModule> Modules { get;} = new Dictionary<Type, EventScriptPlayerModule>();
+        protected Dictionary<Type, EventScriptPlayerModule> Modules { get; } =
+            new Dictionary<Type, EventScriptPlayerModule>();
 
         private bool IsInitialized { get; set; } = false;
         public bool IsPlaying => CurrentContext != null;
-        private EventExecutionContext CurrentContext { get; set; }
+        public EventExecutionContext CurrentContext { get; protected set; }
 
-        public IScriptVariablesDatabase ScriptVariablesDatabase { get; private set; }
+        private RegularScriptVariablesDatabase scriptVariablesDatabase =
+            new RegularScriptVariablesDatabase();
+
+        public virtual IScriptVariablesDatabase ScriptVariablesDatabase => scriptVariablesDatabase;
 
         protected virtual void Start()
         {
             EnsureInitialized();
         }
-        
-        private void EnsureInitialized()
+
+        protected void EnsureInitialized()
         {
             Init();
         }
@@ -34,7 +40,6 @@ namespace Mukuro
         {
             if (IsInitialized) return;
             IsInitialized = true;
-            ScriptVariablesDatabase = GetScriptVariablesDatabase();
             foreach (var m in modules)
             {
                 RegisterModule(m);
@@ -54,92 +59,6 @@ namespace Mukuro
             }
 
             Modules.Add(t, module);
-        }
-
-        /// <summary>
-        /// イベントを再生します。シーン参照は現在のアクティブなシーンから検索されます。
-        /// </summary>
-        /// <param name="scriptAsset"></param>
-        /// <param name="eventVariables"></param>
-        public void Play(EventScriptAsset scriptAsset, IVariableStore eventVariables = null)
-        {
-            Play(scriptAsset, SceneManager.GetActiveScene(), eventVariables);
-        }
-
-
-        /// <summary>
-        /// イベントを再生します。
-        /// </summary>
-        /// <param name="scriptAsset"></param>
-        /// <param name="scene"></param>
-        /// <param name="eventVariables"></param>
-        /// <exception cref="NullReferenceException"></exception>
-        public void Play(EventScriptAsset scriptAsset, Scene scene, IVariableStore eventVariables = null)
-        {
-            if (scene == default) throw new NullReferenceException();
-            var runtimeReference = EventRuntimeReferenceHostRegistry.Get(scene, scriptAsset);
-
-            Play(scriptAsset, runtimeReference, eventVariables);
-        }
-
-        /// <summary>
-        /// イベントを再生します。
-        /// </summary>
-        /// <param name="scriptAsset"></param>
-        /// <param name="runtimeReferences"></param>
-        /// <param name="eventVariables"></param>
-        /// <exception cref="NullReferenceException"></exception>
-        public void Play(EventScriptAsset scriptAsset, EventRuntimeReferenceHost runtimeReferences,
-            IVariableStore eventVariables = null)
-        {
-            if (scriptAsset == null) throw new NullReferenceException();
-            if (eventVariables == null)
-            {
-                EnsureInitialized();
-                eventVariables = ScriptVariablesDatabase.GetStore(scriptAsset);
-            }
-
-            Play(scriptAsset.Script, runtimeReferences, eventVariables);
-        }
-
-        /// <summary>
-        /// イベントを再生します。
-        /// </summary>
-        /// <param name="script"></param>
-        /// <param name="runtimeReferences"></param>
-        /// <param name="eventVariables"></param>
-        /// <exception cref="NullReferenceException"></exception>
-        public void Play(EventScript script, EventRuntimeReferenceHost runtimeReferences,
-            IVariableStore eventVariables)
-        {
-            EnsureInitialized();
-            if (script == null) throw new NullReferenceException();
-            //if (runtimeReferences == null) throw new NullReferenceException();
-            if (eventVariables == null) throw new NullReferenceException();
-
-            if (IsPlaying)
-            {
-                throw new InvalidOperationException("EventScriptPlayerは別のイベントを再生中です。");
-            }
-
-            var context = new EventExecutionContext(this);
-
-            CurrentContext = context;
-            Debug.Log("EventScriptPlayer: Start.");
-            context.Play(script, () =>
-                {
-                    Debug.Log("EventScriptPlayer: End.");
-                    OnCompleteEvent(context);
-                    CurrentContext = null;
-                },
-                (exception) =>
-                {
-                    Debug.Log("EventScriptPlayer: Error.");
-                    CurrentContext = null;
-                    OnErrorEvent(context);
-                    //TODO: Modulesに対するエラー通知
-
-                }, runtimeReferences, eventVariables, () => OnPlayEvent(context));
         }
 
         private void OnGUI()
@@ -163,11 +82,6 @@ namespace Mukuro
             //GUILayout.Label("CURRENT SCENE REFERENCES");
         }
 
-        protected virtual IScriptVariablesDatabase GetScriptVariablesDatabase()
-        {
-            return new RegularScriptVariablesDatabase();
-        }
-
         public T GetModule<T>() where T : EventScriptPlayerModule
         {
             if (Modules.TryGetValue(typeof(T), out var result))
@@ -185,26 +99,119 @@ namespace Mukuro
         {
         }
 
+
+    }
+
+    public abstract class EventScriptPlayer<T> : EventScriptPlayerBase where T : EventPlayingOption
+    {
+        public void Play(T option)
+        {
+            if (!option.Ready(ScriptVariablesDatabase)) throw new ArgumentException();
+            EnsureInitialized();
+
+            if (IsPlaying)
+            {
+                throw new InvalidOperationException("EventScriptPlayerは別のイベントを再生中です。");
+            }
+
+            var context = new EventExecutionContext(this);
+
+            CurrentContext = context;
+            Debug.Log("EventScriptPlayer: Start.");
+            context.Play(option.Script, () =>
+                {
+                    Debug.Log("EventScriptPlayer: End.");
+                    OnCompleteEvent(context);
+                    CurrentContext = null;
+                },
+                (exception) =>
+                {
+                    Debug.Log("EventScriptPlayer: Error.");
+                    CurrentContext = null;
+                    OnErrorEvent(context);
+                    //TODO: Modulesに対するエラー通知
+                }, option.RuntimeReferenceHost, option.EventVariables, option.TemporaryVariables, () => OnPlayEvent(context, option));
+            
+            
+        }
+        
         /// <summary>
         /// イベントの再生前に呼ばれる。
         /// </summary>
-        protected virtual void OnPlayEvent(EventExecutionContext context)
+        protected virtual void OnPlayEvent(EventExecutionContext context, T option)
         {
         }
-        
+
         /// <summary>
         /// イベントの再生が正常に終わったときに呼ばれる。
         /// </summary>
         /// <param name="context"></param>
         protected virtual void OnCompleteEvent(EventExecutionContext context)
-        {}
-        
-        
+        {
+        }
+
+
         /// <summary>
         /// イベントの再生がエラーで終了したときに呼ばれる。
         /// </summary>
         /// <param name="context"></param>
         protected virtual void OnErrorEvent(EventExecutionContext context)
-        {}
+        {
+        }
+    }
+    
+    public class EventScriptPlayer : EventScriptPlayer<EventPlayingOption>
+    {
+        
+    }
+
+    public class EventPlayingOption
+    {
+        public EventScriptAsset ScriptAsset { get; }
+
+        private EventScript script;
+        public EventScript Script
+        {
+            get
+            {
+                if (ScriptAsset) return ScriptAsset.Script;
+                return script;
+            }
+        }
+        public IVariableStore TemporaryVariables{ get; set; }
+        public IVariableStore EventVariables{ get; set; }
+        public Scene SceneForRuntimeReference{ get; set; }
+        public EventRuntimeReferenceHost RuntimeReferenceHost{ get; set; }
+
+        public EventPlayingOption(EventScriptAsset script)
+        {
+            ScriptAsset = script;
+        }
+        
+        public EventPlayingOption(EventScript script)
+        {
+            this.script = script;
+        }
+
+        public bool Ready(IScriptVariablesDatabase eventVariableDatabase)
+        {
+            if (ScriptAsset == null) return false;
+
+            if (RuntimeReferenceHost == null)
+            {
+                if (SceneForRuntimeReference == default) SceneForRuntimeReference = SceneManager.GetActiveScene();
+                if (ScriptAsset == null) return false;
+                RuntimeReferenceHost = EventRuntimeReferenceHostRegistry.Get(SceneForRuntimeReference, ScriptAsset);
+            }
+
+            if (EventVariables == null)
+            {
+                if (ScriptAsset == null) return false;
+                EventVariables = eventVariableDatabase.GetStore(ScriptAsset.Id);
+            }
+            if (TemporaryVariables == null) TemporaryVariables = new RegularVariableStore();
+
+            return true;
+        }
     }
 }

@@ -239,13 +239,13 @@ namespace Mukuro.Editors
 
             root.Add(typeSelector);
 
-            var targetTypeProp = property.FindPropertyRelative("storeType");
-            if (targetTypeProp == null)
+            if (string.IsNullOrEmpty(property.managedReferenceFullTypename))
             {
                 property.managedReferenceValue = new IntVariableReference();
                 property.serializedObject.ApplyModifiedProperties();
-                targetTypeProp = property.FindPropertyRelative("storeType");
             }
+            
+            var targetTypeProp = property.FindPropertyRelative("storeType");
 
             var targetType = targetTypeProp.enumDisplayNames[targetTypeProp.enumValueIndex];
 

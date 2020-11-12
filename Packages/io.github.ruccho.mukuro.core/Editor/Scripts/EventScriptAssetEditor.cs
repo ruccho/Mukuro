@@ -20,6 +20,13 @@ namespace Mukuro.Editors
             {
                 EventScriptEditorWindow.ShowWindow(Target);
             };
+
+            root.Q<TextField>("IDField").bindingPath = serializedObject.FindProperty("id").propertyPath;
+            root.Q<Button>("RegenerateIDButton").clickable.clicked += () =>
+            {
+                serializedObject.FindProperty("id").stringValue = "";
+                serializedObject.ApplyModifiedProperties();
+            };
             
             return root;
         }

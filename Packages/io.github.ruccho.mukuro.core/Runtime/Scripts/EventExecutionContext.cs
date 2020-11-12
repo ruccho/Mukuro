@@ -11,7 +11,7 @@ namespace Mukuro
 {
     public class EventExecutionContext : IVariableStoreContainer
     {
-        private EventScriptPlayer Player { get; set; }
+        private EventScriptPlayerBase Player { get; set; }
         public EventRuntimeReferenceHost ReferenceResolver => CurrentSession?.ReferenceResolver;
         
         public IVariableStore TemporaryVariables => CurrentSession?.TemporaryVariables;
@@ -44,13 +44,13 @@ namespace Mukuro
             }
         }
 
-        public EventExecutionContext(EventScriptPlayer player)
+        public EventExecutionContext(EventScriptPlayerBase player)
         {
             Player = player;
         }
         
         public void Play(EventScript script, Action onFinished, Action<Exception> onError, EventRuntimeReferenceHost runtimeReferences,
-            IVariableStore eventVariables, Action onPlayEvent)
+            IVariableStore eventVariables, IVariableStore temporaryVariables, Action onPlayEvent)
         {
             if (script == null) throw new NullReferenceException();
             if (eventVariables == null) throw new NullReferenceException();
@@ -58,7 +58,7 @@ namespace Mukuro
             this.OnFinished = onFinished;
             this.OnError = onError;
             
-            var rootSession = new ScriptExecutionSession(script, this, OnRootSessionFinished, runtimeReferences, new RegularVariableStore(), eventVariables);
+            var rootSession = new ScriptExecutionSession(script, this, OnRootSessionFinished, runtimeReferences, temporaryVariables, eventVariables);
             CallStack.Add(rootSession);
             onPlayEvent?.Invoke();
             rootSession.StartScript();

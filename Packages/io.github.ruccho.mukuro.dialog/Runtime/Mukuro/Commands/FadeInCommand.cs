@@ -5,22 +5,21 @@ using UnityEngine;
 
 namespace Mukuro.Dialog
 {
-    [EventCommand("Mukuro Dialog", "メッセージの表示")]
-    public class DialogShowMessageCommand : EventCommand
+    [EventCommand("Mukuro Dialog", "フェードイン")]
+    public class FadeInCommand : EventCommand
     {
-        [SerializeReference] private DialogShowMessageSettings settings = default;
-
+        
+        [SerializeField] private float duration = default;
         public override void Execute(EventExecutionContext context, CommandExecutionHandle handle)
         {
             var dialog = context.GetModule<DialogModule>();
             if (dialog == default)
             {
-                context.RaiseError(new ScriptExecutionException("DialogSessionが登録されていません。"));
+                context.RaiseError(new ScriptExecutionException("DialogModuleが登録されていません。"));
                 return;
             }
-
-
-            dialog.ShowMessage(settings, () => { handle.Complete(); });
+            
+            dialog.Fade.In(duration, handle.Complete);
         }
     }
 }

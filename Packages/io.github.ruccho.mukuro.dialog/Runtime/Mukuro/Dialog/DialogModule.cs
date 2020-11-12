@@ -8,9 +8,13 @@ namespace Mukuro.Dialog
 {
     public class DialogModule : EventScriptPlayerModule
     {
-        [SerializeField] private DialogProvider[] providers = default;
+        [SerializeField] private DialogProviderBase[] providers = default;
+        [SerializeField] private Fade fade = default;
+        [SerializeField] private Cut cut = default;
+        public Fade Fade => fade;
+        public Cut Cut => cut;
         
-        public DialogProvider CurrentProvider { get; private set; }
+        public DialogProviderBase CurrentProvider { get; private set; }
         
         public void Open(Action onOpened)
         {

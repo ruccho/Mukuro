@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Reflection;
-using Mukuro.Editors.Utilities;
 using UnityEditor;
-using UnityEditor.Experimental;
-using UnityEditor.SceneManagement;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
-using Object = System.Object;
 
 namespace Mukuro.Editors
 {
@@ -23,17 +16,27 @@ namespace Mukuro.Editors
         private static readonly string visualTreeAssetPath =
             "Packages/io.github.ruccho.mukuro.core/Editor/Layout/EventScriptEditor.uxml";
         
-        private static readonly string EditorResourcesBasePath = "";
-        private static readonly string DefaultCommonDarkStyleSheetPath =
-            Path.Combine(EditorResourcesBasePath, "StyleSheets/Generated/DefaultCommonDark.uss.asset");
-        private static readonly string DefaultCommonLightStyleSheetPath =
-            Path.Combine(EditorResourcesBasePath, "StyleSheets/Generated/DefaultCommonLight.uss.asset");
-        internal static StyleSheet DefaultCommonDarkStyleSheet;
-        internal static StyleSheet DefaultCommonLightStyleSheet;
+        private static StyleSheet defaultCommonDarkStyleSheet;
+        private static StyleSheet defaultCommonLightStyleSheet;
 
-        internal static string GetStyleSheetPathForFont(string sheetPath, string fontName)
+        private static void GetSkins()
         {
-            return LocalizationDatabase.currentEditorLanguage == SystemLanguage.English ? sheetPath.Replace(".uss", "_" + fontName.ToLowerInvariant() + ".uss") : sheetPath;
+            //UnityEditor.dllを取得
+            var assembly = typeof(Editor).Assembly;
+
+            //UIElementsEditorUtilityのTypeを取得
+            var type = assembly.GetType("UnityEditor.UIElements.UIElementsEditorUtility");
+            if (type == null) return;
+
+            //StyleSheetを格納するフィールドを取得
+            var darkField = type.GetField("s_DefaultCommonDarkStyleSheet", BindingFlags.Static | BindingFlags.NonPublic);
+            var lightField = type.GetField("s_DefaultCommonLightStyleSheet", BindingFlags.Static | BindingFlags.NonPublic);
+
+            if (darkField == null || lightField == null) return;
+
+            //staticなフィールドとして値を取得
+            defaultCommonDarkStyleSheet = (StyleSheet) darkField.GetValue(null);
+            defaultCommonLightStyleSheet = (StyleSheet) lightField.GetValue(null);
         }
         
         public static void ShowWindow(EventScriptAsset scriptAsset)
@@ -93,17 +96,10 @@ namespace Mukuro.Editors
             VisualTreeAsset uiAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(visualTreeAssetPath);
             VisualElement root = uiAsset.CloneTree();
 
-            if (DefaultCommonDarkStyleSheet == null || DefaultCommonLightStyleSheet == null)
-            {
-                string fontName = (string) typeof(EditorResources).GetProperty("currentFontName", BindingFlags.Static | BindingFlags.NonPublic).GetValue(null);
-                var darkStyleSheetPath = GetStyleSheetPathForFont(DefaultCommonDarkStyleSheetPath, fontName);
-                var lightStyleSheetPath = GetStyleSheetPathForFont(DefaultCommonDarkStyleSheetPath, fontName);
-                DefaultCommonDarkStyleSheet = (StyleSheet)EditorGUIUtility.Load(darkStyleSheetPath);
-                DefaultCommonLightStyleSheet = (StyleSheet)EditorGUIUtility.Load(lightStyleSheetPath);
-            }
+            GetSkins();
             
             rootVisualElement.styleSheets.Clear();
-            rootVisualElement.styleSheets.Add(DefaultCommonDarkStyleSheet);
+            rootVisualElement.styleSheets.Add(defaultCommonDarkStyleSheet);
             
             root.style.flexGrow = 1f;
 

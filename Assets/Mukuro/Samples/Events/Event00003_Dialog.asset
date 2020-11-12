@@ -60,21 +60,15 @@ MonoBehaviour:
       data:
         synchronization: 0
         enabled: 1
-        speaker: {fileID: 11400000, guid: 2085c0417d2850a48b4bd85e2b5f0651, type: 2}
-        face: Default
-        message: 
-        allowSpeedUp: 1
-        allowSkipping: 1
+        settings:
+          id: 9
     00000005:
       type: {class: DialogShowMessageCommand, ns: Mukuro.Dialog, asm: Mukuro.Dialog}
       data:
         synchronization: 0
         enabled: 1
-        speaker: {fileID: 11400000, guid: 988050f0a65c8ba4196cdb912f679301, type: 2}
-        face: Default
-        message: "\u5354\u529B\u3057\u3066\u304F\u308C\u308B\u3088\u306D\uFF1F"
-        allowSpeedUp: 1
-        allowSkipping: 1
+        settings:
+          id: 10
     00000006:
       type: {class: WhileVariableCommand, ns: Mukuro, asm: Mukuro}
       data:
@@ -83,46 +77,56 @@ MonoBehaviour:
         waitForAllCommand: 0
         condition:
           left:
-            id: 9
+            id: 11
           right:
-            id: 10
+            id: 12
           conditionOperator: 0
         routine:
           commands:
-          - id: 11
+          - id: 13
     00000007:
       type: {class: DialogShowMessageCommand, ns: Mukuro.Dialog, asm: Mukuro.Dialog}
       data:
         synchronization: 0
         enabled: 1
-        speaker: {fileID: 11400000, guid: 988050f0a65c8ba4196cdb912f679301, type: 2}
-        face: Default
-        message: "\u3042\u308A\u304C\u3068\u3046\uFF01\uFF01\uFF01\n\u307E\u3055\u304B\u5354\u529B\u3057\u3066\u304F\u308C\u308B\u306A\u3093\u3066\uFF01"
-        allowSpeedUp: 1
-        allowSkipping: 1
+        settings:
+          id: 14
     00000008:
       type: {class: DialogShowMessageCommand, ns: Mukuro.Dialog, asm: Mukuro.Dialog}
       data:
         synchronization: 0
         enabled: 1
-        speaker: {fileID: 11400000, guid: 2085c0417d2850a48b4bd85e2b5f0651, type: 2}
+        settings:
+          id: 15
+    00000009:
+      type: {class: DialogShowMessageSettings, ns: Mukuro.Dialog, asm: Mukuro.Dialog}
+      data:
+        speakerInfo: {fileID: 11400000, guid: 2085c0417d2850a48b4bd85e2b5f0651, type: 2}
         face: Default
-        message: "\u3048\u3047\u2026\u2026"
+        message: "\u3042\u3042\u3042\u3042\u3042"
         allowSpeedUp: 1
         allowSkipping: 1
-    00000009:
+    0000000A:
+      type: {class: DialogShowMessageSettings, ns: Mukuro.Dialog, asm: Mukuro.Dialog}
+      data:
+        speakerInfo: {fileID: 11400000, guid: 988050f0a65c8ba4196cdb912f679301, type: 2}
+        face: Smile
+        message: "\u5354\u529B\u3057\u3066\u304F\u308C\u308B\u3088\u306D\uFF1F"
+        allowSpeedUp: 1
+        allowSkipping: 1
+    0000000B:
       type: {class: BoolVariableReference, ns: Mukuro, asm: Mukuro}
       data:
         storeType: 1
         key: agree
         constantValue: 0
-    0000000A:
+    0000000C:
       type: {class: BoolVariableReference, ns: Mukuro, asm: Mukuro}
       data:
         storeType: 0
         key: 
         constantValue: 0
-    0000000B:
+    0000000D:
       type: {class: DialogShowMenuCommand, ns: Mukuro.Dialog, asm: Mukuro.Dialog}
       data:
         synchronization: 0
@@ -131,39 +135,60 @@ MonoBehaviour:
         - label: "\u3044\u3044\u3088"
           commandList:
             commands:
-            - id: 12
+            - id: 16
         - label: "\u3060\u3081\u3067\u3059"
           commandList:
             commands:
-            - id: 13
-    0000000C:
+            - id: 17
+    0000000E:
+      type: {class: DialogShowMessageSettings, ns: Mukuro.Dialog, asm: Mukuro.Dialog}
+      data:
+        speakerInfo: {fileID: 11400000, guid: 988050f0a65c8ba4196cdb912f679301, type: 2}
+        face: Smile
+        message: "\u3042\u308A\u304C\u3068\u3046\uFF01\uFF01\uFF01\u307E\u3055\u304B\u5354\u529B\u3057\u3066\u304F\u308C\u308B\u306A\u3093\u3066\uFF01"
+        allowSpeedUp: 1
+        allowSkipping: 1
+    0000000F:
+      type: {class: DialogShowMessageSettings, ns: Mukuro.Dialog, asm: Mukuro.Dialog}
+      data:
+        speakerInfo: {fileID: 11400000, guid: 2085c0417d2850a48b4bd85e2b5f0651, type: 2}
+        face: Default
+        message: "\u3048\u3047\u2026\u2026"
+        allowSpeedUp: 1
+        allowSkipping: 1
+    00000010:
       type: {class: SetVariableCommand, ns: Mukuro, asm: Mukuro}
       data:
         synchronization: 0
         enabled: 1
         value:
-          id: 14
+          id: 18
         target:
-          id: 15
-    0000000D:
+          id: 19
+    00000011:
       type: {class: DialogShowMessageCommand, ns: Mukuro.Dialog, asm: Mukuro.Dialog}
       data:
         synchronization: 0
         enabled: 1
-        speaker: {fileID: 11400000, guid: 988050f0a65c8ba4196cdb912f679301, type: 2}
-        face: Default
-        message: "\u307E\u3042\u307E\u3042\u305D\u3093\u306A\u3053\u3068\u8A00\u308F\u305A\u306B\u2026\u2026"
-        allowSpeedUp: 1
-        allowSkipping: 1
-    0000000E:
+        settings:
+          id: 20
+    00000012:
       type: {class: BoolVariableReference, ns: Mukuro, asm: Mukuro}
       data:
         storeType: 0
         key: 
         constantValue: 1
-    0000000F:
+    00000013:
       type: {class: BoolVariableReference, ns: Mukuro, asm: Mukuro}
       data:
         storeType: 1
         key: agree
         constantValue: 0
+    00000014:
+      type: {class: DialogShowMessageSettings, ns: Mukuro.Dialog, asm: Mukuro.Dialog}
+      data:
+        speakerInfo: {fileID: 11400000, guid: 988050f0a65c8ba4196cdb912f679301, type: 2}
+        face: Default
+        message: "\u3048\uFF1F\u306A\u3093\u3060\u3063\u3066\uFF1F\n\u805E\u3053\u3048\u306A\u304B\u3063\u305F\u306A\u2026\u2026"
+        allowSpeedUp: 1
+        allowSkipping: 1

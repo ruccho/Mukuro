@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using UnityEditor;
 using UnityEditor.Build.Content;
@@ -66,6 +67,30 @@ namespace Mukuro.Editors
         /// </summary>
         public virtual void OnCreated()
         {
+            //ShowListViewInCustomDetailAttributeがついてるEventCommandListをDetailに追加する
+            var commandProp = CommandItem.CommandProperty.GetProperty();
+            var typeDesc = commandProp.managedReferenceFullTypename.Split(' ');
+
+            var assemblyName = typeDesc[0];
+            var typeName = typeDesc[1];
+
+            var assembly = AppDomain.CurrentDomain.GetAssemblies().FirstOrDefault(a => a.GetName().Name == assemblyName);
+            if (assembly == default) return;
+
+            var type = assembly.DefinedTypes.FirstOrDefault(t => t.FullName == typeName);
+            if (type == default) return;
+            
+            var fields = type.GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
+            var field = fields.FirstOrDefault(f => Enumerable.Any<CustomAttributeData>(f.CustomAttributes,
+                a => a.AttributeType == typeof(ShowListViewInCustomDetailAttribute)));
+            if (field == default) return;
+            if (field.FieldType != typeof(EventCommandList)) return;
+
+            var listProp = CommandItem.CommandProperty.GetChildProperty(field.Name);
+            if (listProp.GetProperty() == null) return;
+
+            var list = new CommandListView(CommandItem.ParentList, listProp.GetChildProperty("commands"));
+            CustomDetailRoot.Add(list);
         }
 
         /// <summary>
@@ -111,6 +136,7 @@ namespace Mukuro.Editors
 
         public override void OnCreated()
         {
+            base.OnCreated();
         }
 
         public override void OnUpdate()

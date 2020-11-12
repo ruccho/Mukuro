@@ -77,6 +77,11 @@ namespace Mukuro
                     throw new ArgumentOutOfRangeException();
             }
 
+            if (store == null)
+            {
+                throw new NullReferenceException($"IVariableStoreContainerに変数ストア{storeType}が登録されていません。");
+            }
+
             if (store.TryGetValueType(key, out Type t))
             {
                 if (t != typeof(T))

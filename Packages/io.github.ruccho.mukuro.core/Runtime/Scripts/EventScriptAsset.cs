@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Mukuro
 {
-    [CreateAssetMenu(fileName = "Event00000", menuName = "Mukuro/CommandScriptAsset")]
+    [CreateAssetMenu(fileName = "Event00000", menuName = "Mukuro/EventScriptAsset")]
     public class EventScriptAsset : ScriptableObject
     {
         [SerializeField] private EventScript script = default;
