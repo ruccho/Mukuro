@@ -7,16 +7,17 @@ using UnityEngine.UIElements;
 
 namespace Mukuro.Dialog.Editors
 {
-    [CustomEventCommandEditor(typeof(DialogClosingSessionCommand))]
+    [CustomEventCommandEditor(typeof(DialogClosingSessionCommand), IconTexturePath = iconPath)]
     public class DialogClosingSessionCommandEditor : EventCommandEditor
     {
+        private const string iconPath =
+            "Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/Icons/DialogSession.png";
         private static Texture2D Icon { get; set; }
 
         private static void EnsureIconLoaded()
         {
             if (Icon == null)
-                Icon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-                    "Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/Icons/DialogSession.png");
+                Icon = AssetDatabase.LoadAssetAtPath<Texture2D>(iconPath);
         }
 
         public DialogClosingSessionCommandEditor(CommandItem commandItem, VisualElement customDetailRoot) : base(commandItem,

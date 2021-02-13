@@ -14,5 +14,8 @@ namespace Mukuro.Editors
 
         public Type CommandType { get; }
         
+        
+        public string IconTexturePath { get; set; }
+        
     }
 }

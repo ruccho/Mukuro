@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -24,7 +25,8 @@ namespace Mukuro.Editors
             root.Q<TextField>("IDField").bindingPath = serializedObject.FindProperty("id").propertyPath;
             root.Q<Button>("RegenerateIDButton").clickable.clicked += () =>
             {
-                serializedObject.FindProperty("id").stringValue = "";
+                var id = Guid.NewGuid().ToString();
+                serializedObject.FindProperty("id").stringValue = id;
                 serializedObject.ApplyModifiedProperties();
             };
             

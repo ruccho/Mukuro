@@ -98,7 +98,7 @@ namespace Mukuro
         {
             if (!registry.ContainsKey(scene))
             {
-                throw new InvalidOperationException("Scene is not loaded");
+                throw new InvalidOperationException($"Scene \"{scene.name}\" is not loaded");
             }
             else
             {

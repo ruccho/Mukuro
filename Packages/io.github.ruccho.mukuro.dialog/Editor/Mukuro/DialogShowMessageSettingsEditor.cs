@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
@@ -24,16 +25,22 @@ namespace Mukuro.Dialog.Editors
             message.RegisterCallback<FocusOutEvent>(evt => { Input.imeCompositionMode = IMECompositionMode.Auto; });
             root.Add(message);
 
-            var speaker = new ObjectField("話者");
-            speaker.objectType = typeof(SpeakerInfoAsset);
-            speaker.bindingPath =
-                property.FindPropertyRelative("speakerInfo").propertyPath;
+            int faceIndex = -1;
+
+            var speaker = BuildSpeakerField(property.FindPropertyRelative("speakerInfo"), asset =>
+            {
+                root.RemoveAt(faceIndex);
+                root.Insert(faceIndex, BuildFaceField(property, asset));
+            }); //new ObjectField("話者");
+            //speaker.objectType = typeof(SpeakerInfoAsset);
+            /*speaker.bindingPath =
+                property.FindPropertyRelative("speakerInfo").propertyPath;*/
             root.Add(speaker);
 
             var face = BuildFaceField(property,
                 property.FindPropertyRelative("speakerInfo").objectReferenceValue as SpeakerInfoAsset);
             root.Add(face);
-            var faceIndex = root.IndexOf(face);
+            faceIndex = root.IndexOf(face);
 
             var allowSpeedUp = new PropertyField();
             allowSpeedUp.label = "文字送り加速を許可";
@@ -47,13 +54,53 @@ namespace Mukuro.Dialog.Editors
                 property.FindPropertyRelative("allowSkipping").propertyPath;
             root.Add(allowSkipping);
 
+            /*
             speaker.RegisterValueChangedCallback((e) =>
             {
-                root.RemoveAt(faceIndex);
-                root.Insert(faceIndex, BuildFaceField(property, (SpeakerInfoAsset) e.newValue));
             });
+            */
 
             return root;
+        }
+
+        private VisualElement BuildSpeakerField(SerializedProperty property, Action<SpeakerInfoAsset> updateFaceField)
+        {
+            if (property.propertyType != SerializedPropertyType.ObjectReference) throw new ArgumentException();
+
+            var currentObject = property.objectReferenceValue;
+
+            var assets = Resources.FindObjectsOfTypeAll<SpeakerInfoAsset>().ToList();
+            assets.Insert(0, null);
+
+
+            int index = -1;
+            if (currentObject is SpeakerInfoAsset currentSpeakerInfoAsset)
+            {
+                index = assets.IndexOf(currentSpeakerInfoAsset);
+            }
+            else if (currentObject == null) index = 0;
+
+            if (index < 0)
+            {
+                return new ObjectField("話者")
+                {
+                    bindingPath = property.propertyPath
+                };
+            }
+
+            Func<SpeakerInfoAsset, string> formatter =  asset => asset ? asset.SpeakerInfo.Name : "(None)";
+            var menu = new PopupField<SpeakerInfoAsset>(assets, index, formatter, formatter);
+            menu.label = "話者";
+
+            menu.RegisterValueChangedCallback(evt =>
+            {
+                property.objectReferenceValue = evt.newValue;
+                property.serializedObject.ApplyModifiedProperties();
+                updateFaceField.Invoke(evt.newValue);
+            });
+
+
+            return menu;
         }
 
         private VisualElement BuildFaceField(SerializedProperty property, SpeakerInfoAsset speakerInfo)

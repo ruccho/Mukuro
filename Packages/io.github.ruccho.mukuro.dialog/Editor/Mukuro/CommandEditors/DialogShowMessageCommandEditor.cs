@@ -8,9 +8,14 @@ using UnityEngine.UIElements;
 
 namespace Mukuro.Dialog.Editors
 {
-    [CustomEventCommandEditor(typeof(DialogShowMessageCommand))]
+    [CustomEventCommandEditor(typeof(DialogShowMessageCommand), IconTexturePath = iconPath)]
     public class DialogShowMessageCommandEditor : EventCommandEditor
     {
+        private const string iconPath =
+            "Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/Icons/DialogShowMessage.png";
+        private static readonly string EditorPrefsDefaultSettingsTypeNameKey =
+            "Mukuro.Dialog.Editors.DialogShowMessageCommandEditor.DefaultSettingsTypeName";
+        
         private static Type[] DialogShowMessageSettingsTypes;
 
         [InitializeOnLoadMethod]
@@ -26,8 +31,7 @@ namespace Mukuro.Dialog.Editors
         private static void EnsureIconLoaded()
         {
             if (Icon == null)
-                Icon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-                    "Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/Icons/DialogShowMessage.png");
+                Icon = AssetDatabase.LoadAssetAtPath<Texture2D>(iconPath);
         }
 
         public DialogShowMessageCommandEditor(CommandItem commandItem, VisualElement customDetailRoot) : base(
@@ -91,9 +95,31 @@ namespace Mukuro.Dialog.Editors
             }
             else
             {
-                settingsProp.managedReferenceValue = new DialogShowMessageSettings();
+                //Settingsが未設定(null)
+                
+                object settingsInstance;
+                
+                //直前に使用したSettingsを使用する
+                if (EditorPrefs.HasKey(EditorPrefsDefaultSettingsTypeNameKey))
+                {
+                    var defaultSettingsTypeName = EditorPrefs.GetString(EditorPrefsDefaultSettingsTypeNameKey);
+                    var settingsType = Type.GetType(defaultSettingsTypeName);
+                    if (settingsType == null)
+                    {
+                        settingsType = typeof(DialogShowMessageSettings);
+                    }
+
+                    settingsInstance = Activator.CreateInstance(settingsType);
+                }
+                else
+                {
+                    settingsInstance = new DialogShowMessageSettings();
+                }
+
+                settingsProp.managedReferenceValue = settingsInstance;
                 settingsProp.serializedObject.ApplyModifiedProperties();
-                settingsTypeName = typeof(DialogShowMessageSettings).FullName;
+
+                settingsTypeName = settingsInstance.GetType().FullName;
             }
 
             var settingsField = new VisualElement();
@@ -183,8 +209,11 @@ namespace Mukuro.Dialog.Editors
             settingsProp.managedReferenceValue = settings;
             settingsProp.serializedObject.ApplyModifiedProperties();
             UpdateSettingsField(settingsField);
+            
+            //次回以降のデフォルトに設定
+            EditorPrefs.SetString(EditorPrefsDefaultSettingsTypeNameKey, settings.GetType().AssemblyQualifiedName);
         }
-
+/*
         private VisualElement BuildFaceField()
         {
             var commandProp = CommandItem.CommandProperty.GetProperty();
@@ -231,5 +260,6 @@ namespace Mukuro.Dialog.Editors
             });
             return face;
         }
+        */
     }
 }

@@ -3,7 +3,6 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes>
-      <Path>../../ExposedUnityEvent/Packages/io.github.ruccho.exposedunityevent</Path>
       <Path>Library/PackageCache/com.neuecc.unirx@7.1.0</Path>
       <Path>Library/PackageCache/com.unity.2d.animation@3.2.1</Path>
       <Path>Library/PackageCache/com.unity.2d.common@2.0.2</Path>
@@ -21,6 +20,7 @@
       <Path>Library/PackageCache/com.unity.textmeshpro@2.0.1</Path>
       <Path>Library/PackageCache/com.unity.timeline@1.2.14</Path>
       <Path>Library/PackageCache/com.unity.ui.builder@0.11.1-preview</Path>
+      <Path>Library/PackageCache/io.github.ruccho.exposedunityevent@c3dd7ff592</Path>
       <Path>ProjectSettings</Path>
     </explicitIncludes>
     <explicitExcludes>
@@ -30,7 +30,6 @@
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Recordings</Path>
-      <Path>Temp</Path>
       <Path>UIElementsSchema</Path>
       <Path>obj</Path>
     </explicitExcludes>

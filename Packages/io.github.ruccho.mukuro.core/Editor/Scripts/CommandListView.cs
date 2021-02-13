@@ -12,47 +12,39 @@ namespace Mukuro.Editors
 {
     public class CommandListView : BindableElement
     {
+        private CommandEditorDomain Domain { get; }
         public CommandListView ParentList { get; }
         public bool IsRoot => ParentList == null;
 
-        private Action<CommandItem> OnItemSelected;
-        
         private PersistentSerializedProperty CommandArrayProperty { get; }
-
-        public CommandItem SelectedItem { get; private set; }
 
         /// <summary>
         /// ルートListViewとしてセットアップします。
         /// </summary>
         /// <param name="onItemSelected">アイテム選択時のコールバック。</param>
-        internal CommandListView(Action<CommandItem> onItemSelected, SerializedProperty commandArray)
+        internal CommandListView(CommandEditorDomain domain, SerializedProperty commandArray)
         {
+            Domain = domain;
             CommandArrayProperty = new PersistentSerializedProperty(commandArray);
-            if(!CommandArrayProperty.IsArray) throw new ArgumentException("commandArray must be an array.");
-            OnItemSelected = onItemSelected;
-            this.binding = new CommandListViewBinding(() =>
-            {
-                if (SelectedItem != null && SelectedItem.parent != null)
-                    SelectedItem.UpdateCommandDetail();
-            });
+            if (!CommandArrayProperty.IsArray) throw new ArgumentException("commandArray must be an array.");
             BuildList();
-            
         }
 
         public CommandListView(CommandListView parentList, PersistentSerializedProperty commandArray)
         {
+            Domain = parentList.Domain;
             CommandArrayProperty = commandArray;
-            if(!CommandArrayProperty.IsArray) throw new ArgumentException("commandArray must be an array.");
+            if (!CommandArrayProperty.IsArray) throw new ArgumentException("commandArray must be an array.");
             ParentList = parentList;
             BuildList();
         }
-        
+
         private void BuildList()
         {
             this.style.minHeight = 20f;
             this.style.borderLeftWidth = 2f;
             this.style.borderLeftColor = new Color(0, 0, 0, 0.5f);
-            
+
             this.AddManipulator(new CommandMoveTargetManipulator(
                 this,
                 part =>
@@ -77,11 +69,8 @@ namespace Mukuro.Editors
                     this.style.borderTopWidth = new StyleFloat(3f);
                     this.style.borderTopColor = new StyleColor(new Color(0.2f, 0.3411765f, 0.8509805f));
                 },
-                () =>
-                {
-                    this.style.borderTopWidth = new StyleFloat(0f);
-                }));
-            
+                () => { this.style.borderTopWidth = new StyleFloat(0f); }));
+
             this.style.paddingTop = new StyleLength(3f);
             this.style.paddingBottom = new StyleLength(0f);
             this.Clear();
@@ -94,36 +83,18 @@ namespace Mukuro.Editors
             }
         }
 
-        private void SelectItem(CommandItem item)
-        {
-            if (IsRoot)
-            {
-                if (SelectedItem == item) return;
-
-                SelectedItem?.OnDeselected();
-
-                SelectedItem = item;
-
-                item?.OnSelected();
-
-                OnItemSelected?.Invoke(item);
-            }
-            else
-            {
-                //親に伝播
-                ParentList.SelectItem(item);
-            }
-        }
-
         private CommandItem AddCommandElementAt(int index, PersistentSerializedProperty pProp)
         {
-            var item = new CommandItem(this, pProp,SelectItem, Move);
+            var item = new CommandItem(Domain, this, pProp, Move);
             this.Insert(index, item);
             return item;
         }
 
-        private CommandItem AddCommandAt(int index, EventCommand command)
+        public CommandItem AddCommandAt(int index, EventCommand command)
         {
+            //index == -1 のときは末尾に追加する
+            if (index < 0) index = CommandArrayProperty.GetArraySize();
+            
             var pProp = CommandArrayProperty.InsertArrayElementAt(index);
             var prop = pProp.GetProperty();
             prop.managedReferenceValue = command;
@@ -134,60 +105,25 @@ namespace Mukuro.Editors
         private CommandItem AddCommandAt(int index, PersistentSerializedProperty source)
         {
             var destPProp = CommandArrayProperty.InsertArrayElementAt(index);
-            
+
             var destProp = destPProp.GetProperty();
             destProp.managedReferenceValue = null;
             var sourceProp = source.GetProperty();
-            
+
             CopyCommandProperty(sourceProp, destProp);
-            
+
             destProp.serializedObject.ApplyModifiedProperties();
             return AddCommandElementAt(index, destPProp);
         }
 
-        private void RemoveCommandAt(int index)
+        public void RemoveCommandAt(int index)
         {
             var pProp = CommandArrayProperty;
             var prop = pProp.GetProperty();
             pProp.DeleteArrayElementAt(index);
             this.RemoveAt(index);
         }
-        
-        public void RemoveCommandAtSelected()
-        {
-            if (SelectedItem != null && SelectedItem.parent != null)
-            {
-                SelectedItem.ParentList.RemoveCommandAt(SelectedItem.GetIndex());
-            }
-            
-        }
-        
 
-        public CommandItem AddCommandAtSelected(EventCommand command)
-        {
-            if (!IsRoot)
-                throw new InvalidOperationException(
-                    "AddCommandAtSelected can't be executed on non-root CommandListView.");
-
-            if (SelectedItem != null && SelectedItem.parent != null)
-            {
-                int index = SelectedItem.GetIndex();
-                if (index == -1)
-                    throw new InvalidOperationException("Selected Item is not a member of the CommandListView. ");
-
-                return SelectedItem.ParentList.AddCommandAt(index + 1, command);
-            }
-            else
-            {
-                return AddCommandAt(Children().Count(), command);
-            }
-        }
-
-        private void UpdateStripe()
-        {
-            
-        }
-        
         public static void Move(CommandItem source, CommandListView dest, int index)
         {
             //Debug.Log($"{source.GetIndex()} to {index}");
@@ -200,18 +136,19 @@ namespace Mukuro.Editors
                 EditorUtility.DisplayDialog("", "コマンドをそれ自身の子に移動することはできません。", "OK");
                 return;
             }
+
             var destItem = dest.AddCommandAt(index, sourcePProp);
-            
+
             //コピー元の削除
             //データの削除
             var sourceIndex = sourcePProp.GetArrayIndex();
             source.ParentList.RemoveCommandAt(sourceIndex);
-            
+
             //コピー先の選択
             destItem.Select();
         }
-        
-        private void CopyCommandProperty(SerializedProperty source, SerializedProperty dest)
+
+        private static void CopyCommandProperty(SerializedProperty source, SerializedProperty dest)
         {
             //Debug.Log($"{source.propertyPath} to {dest.propertyPath}");
             if (source.propertyType != SerializedPropertyType.ManagedReference) return;
@@ -231,6 +168,7 @@ namespace Mukuro.Editors
                     {
                         dest.arraySize = source.arraySize;
                     }
+
                     break;
                 case SerializedPropertyType.Integer:
                 case SerializedPropertyType.LayerMask:
@@ -347,30 +285,6 @@ namespace Mukuro.Editors
                     CopySerializedProperty(iter, iterDest);
                 } while (iter.Next(false) && iter.depth > sourceDepth);
             }
-        }
-    }
-
-
-    public class CommandListViewBinding : IBinding
-    {
-        private Action OnUpdate;
-
-        public CommandListViewBinding(Action onUpdate)
-        {
-            OnUpdate = onUpdate;
-        }
-
-        public void PreUpdate()
-        {
-        }
-
-        public void Update()
-        {
-            OnUpdate?.Invoke();
-        }
-
-        public void Release()
-        {
         }
     }
 }

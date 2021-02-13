@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\nobor\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\nobor\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Mukuro.1600564295.00" t="ExcludeRecursive" />
-    <e p="C:\Users\nobor\Documents\development\repositories\ExposedUnityEvent\Packages\io.github.ruccho.exposedunityevent\Editor" t="Include">
-      <e p="io.github.ruccho.exposedunityevent.editor.asmdef" t="Include" />
-      <e p="Scripts" t="Include">
-        <e p="ExposedInvokableCallPropertyDrawer.cs" t="Include" />
-        <e p="ExposedUnityEventPropertyDrawer.cs" t="Include" />
-        <e p="TypeRestrictedExposedReferenceDrawer.cs" t="Include" />
-      </e>
-    </e>
-    <e p="C:\Users\nobor\Documents\development\repositories\ExposedUnityEvent\Packages\io.github.ruccho.exposedunityevent\Runtime" t="Include">
-      <e p="io.github.ruccho.exposedunityevent.asmdef" t="Include" />
-      <e p="Scripts" t="Include">
-        <e p="ExposedInvokableCall.cs" t="Include" />
-        <e p="ExposedUnityEvent.cs" t="Include" />
-        <e p="TypeRestrictedExposedReferenceAttribute.cs" t="Include" />
-      </e>
-    </e>
+    <e p="C:\Users\nobor\AppData\local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\nobor\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\Rider\v202\SolutionCaches\_Mukuro.1600564295.00" t="ExcludeRecursive" />
     <e p="C:\Users\nobor\Documents\development\repositories\Mukuro\Mukuro" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -50,10 +34,7 @@
             <e p="UIEventTrigger.cs" t="Include" />
           </e>
         </e>
-        <e p="TestComponent.cs" t="Include" />
       </e>
-      <e p="io.github.ruccho.exposedunityevent.csproj" t="IncludeRecursive" />
-      <e p="io.github.ruccho.exposedunityevent.editor.csproj" t="IncludeRecursive" />
       <e p="Mukuro.csproj" t="IncludeRecursive" />
       <e p="Mukuro.Dialog.csproj" t="IncludeRecursive" />
       <e p="Mukuro.Dialog.Editors.csproj" t="IncludeRecursive" />
@@ -89,14 +70,12 @@
               </e>
               <e p="CommandItem.cs" t="Include" />
               <e p="CommandListView.cs" t="Include" />
+              <e p="CompositeVariableConditionPropertyDrawer.cs" t="Include" />
               <e p="CustomEventCommandEditorAttribute.cs" t="Include" />
               <e p="EventCommandEditor.cs" t="Include" />
               <e p="EventCommandUtility.cs" t="Include" />
               <e p="EventScriptAssetEditor.cs" t="Include" />
               <e p="EventScriptEditorWindow.cs" t="Include" />
-              <e p="Utilities" t="Include">
-                <e p="LocalizationDatabase.cs" t="Include" />
-              </e>
               <e p="VariableCalculationPropertyDrawer.cs" t="Include" />
               <e p="VariableConditionEditor.cs" t="Include" />
               <e p="VariableReferencePropertyDrawer.cs" t="Include" />
@@ -134,6 +113,7 @@
               <e p="IVariableStoreContainer.cs" t="Include" />
               <e p="RegularScriptVariablesDatabase.cs" t="Include" />
               <e p="ScriptExecutionSession.cs" t="Include" />
+              <e p="SubscriptionHandle.cs" t="Include" />
               <e p="TaskExtensions.cs" t="Include" />
               <e p="Timer" t="Include">
                 <e p="MukuroPlayerLoopRegisterer.cs" t="Include" />
@@ -160,6 +140,7 @@
                 <e p="DialogShowMenuCommandEditor.cs" t="Include" />
                 <e p="DialogShowMessageCommandEditor.cs" t="Include" />
               </e>
+              <e p="DialogShowMessageSettingsEditor.cs" t="Include" />
             </e>
             <e p="Mukuro.Dialog.Editors.asmdef" t="Include" />
           </e>
@@ -170,10 +151,18 @@
                 <e p="DialogSessionCommand.cs" t="Include" />
                 <e p="DialogShowMenuCommand.cs" t="Include" />
                 <e p="DialogShowMessageCommand.cs" t="Include" />
+                <e p="FadeCommand.cs" t="Include" />
+                <e p="FadeInCommand.cs" t="Include" />
+                <e p="FadeOutCommand.cs" t="Include" />
+                <e p="HideCutCommand.cs" t="Include" />
+                <e p="ShowCutCommand.cs" t="Include" />
               </e>
               <e p="Dialog" t="Include">
+                <e p="Cut.cs" t="Include" />
                 <e p="DialogModule.cs" t="Include" />
                 <e p="DialogProvider.cs" t="Include" />
+                <e p="DialogShowMessageSettings.cs" t="Include" />
+                <e p="Fade.cs" t="Include" />
                 <e p="ISpeakerInfo.cs" t="Include" />
                 <e p="RegularSpeakerInfoAsset.cs" t="Include" />
                 <e p="RegularWindowedDialogProvider" t="Include">

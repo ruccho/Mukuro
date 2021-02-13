@@ -3,10 +3,11 @@
         <uie:Toolbar>
             <uie:ToolbarButton text="Refresh" name="RefreshButton" style="left: auto;" />
             <uie:ToolbarButton text="Save Asset" name="SaveAssetButton" style="left: auto;" />
+            <uie:ToolbarButton text="Select" name="SelectButton" />
         </uie:Toolbar>
-        <ui:VisualElement name="Editor" style="flex-grow: 1; flex-direction: row; padding-top: 4px;">
-            <ui:VisualElement name="AddCommandPane" style="flex-direction: column; border-left-color: rgb(142, 142, 142); border-right-color: rgb(142, 142, 142); border-top-color: rgb(142, 142, 142); border-bottom-color: rgb(142, 142, 142); border-right-width: 2px; max-width: 250px; width: 226px;">
-                <ui:VisualElement style="background-color: rgb(36, 36, 36); padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+        <ui:VisualElement name="Editor" style="flex-grow: 1; flex-direction: row; padding-top: 4px;">
+            <ui:VisualElement name="AddCommandPane" style="flex-direction: column; border-left-color: rgb(142, 142, 142); border-right-color: rgb(142, 142, 142); border-top-color: rgb(142, 142, 142); border-bottom-color: rgb(142, 142, 142); border-right-width: 2px; max-width: 250px; width: 226px;">
+                <ui:VisualElement style="background-color: rgb(36, 36, 36); padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
                     <ui:Label text="コマンドの追加" style="color: rgb(196, 196, 196);" />
                 </ui:VisualElement>
                 <ui:ListView focusable="True" name="AddCommandList" style="flex-grow: 1;">
@@ -19,34 +20,34 @@
                     <ui:Foldout text="Control" />
                 </ui:ListView>
             </ui:VisualElement>
-            <ui:VisualElement name="CommandListPane" style="flex-direction: column; border-left-color: rgb(142, 142, 142); border-right-color: rgb(142, 142, 142); border-top-color: rgb(142, 142, 142); border-bottom-color: rgb(142, 142, 142); border-right-width: 2px; width: 350px;">
-                <ui:VisualElement style="background-color: rgb(36, 36, 36); padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+            <ui:VisualElement name="CommandListPane" style="flex-direction: column; border-left-color: rgb(142, 142, 142); border-right-color: rgb(142, 142, 142); border-top-color: rgb(142, 142, 142); border-bottom-color: rgb(142, 142, 142); border-right-width: 2px; width: 350px;">
+                <ui:VisualElement style="background-color: rgb(36, 36, 36); padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
                     <ui:Label text="コマンドリスト" style="color: rgb(196, 196, 196);" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: column; flex-grow: 1;">
+                <ui:VisualElement style="flex-direction: column; flex-grow: 1;">
                     <ui:ListView focusable="True" name="CommandListView" style="flex-grow: 1;">
                         <ui:VisualElement name="CommandList" />
                     </ui:ListView>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="CommandEditorPane" style="flex-direction: column; flex-grow: 2;">
+            <ui:VisualElement name="CommandEditorPane" style="flex-direction: column; flex-grow: 2;">
                 <ui:VisualElement style="flex-grow: 1;">
-                    <ui:VisualElement style="background-color: rgb(36, 36, 36); padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+                    <ui:VisualElement style="background-color: rgb(36, 36, 36); padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
                         <ui:Label text="コマンドエディタ" style="color: rgb(196, 196, 196);" />
                     </ui:VisualElement>
                     <ui:ListView focusable="True" style="flex-grow: 1;">
-                        <ui:VisualElement name="CommandEditor" style="flex-grow: 1; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" />
+                        <ui:VisualElement name="CommandEditor" style="flex-grow: 1; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" />
                     </ui:ListView>
                 </ui:VisualElement>
                 <ui:VisualElement>
-                    <ui:VisualElement style="background-color: rgb(36, 36, 36); padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+                    <ui:VisualElement style="background-color: rgb(36, 36, 36); padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
                         <ui:Label text="シーン参照" style="color: rgb(196, 196, 196);" />
                     </ui:VisualElement>
                     <ui:VisualElement>
                         <uie:ObjectField name="ContextObject" focusable="true" />
                         <ui:VisualElement style="flex-direction: row;">
-                            <ui:Button text="Create for active scene" name="CreateReferenceHostButton" style="flex-grow: 1; flex-shrink: 1;" />
-                            <ui:Button text="Find from Scene" name="FindReferenceHostButton" style="flex-grow: 1; flex-shrink: 1;" />
+                            <ui:Button text="Create for active scene" name="CreateReferenceHostButton" style="flex-grow: 1; flex-shrink: 1;" />
+                            <ui:Button text="Find from Scene" name="FindReferenceHostButton" style="flex-grow: 1; flex-shrink: 1;" />
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>

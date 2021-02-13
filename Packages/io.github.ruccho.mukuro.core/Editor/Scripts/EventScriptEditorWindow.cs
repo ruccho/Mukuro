@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using UnityEditor;
 using UnityEditor.UIElements;
@@ -12,10 +13,10 @@ namespace Mukuro.Editors
     {
         //コンパイル後にイベントを再度開くのに使用
         [SerializeField] private string selectedAssetGUID;
-        
+
         private static readonly string visualTreeAssetPath =
             "Packages/io.github.ruccho.mukuro.core/Editor/Layout/EventScriptEditor.uxml";
-        
+
         private static StyleSheet defaultCommonDarkStyleSheet;
         private static StyleSheet defaultCommonLightStyleSheet;
 
@@ -29,8 +30,10 @@ namespace Mukuro.Editors
             if (type == null) return;
 
             //StyleSheetを格納するフィールドを取得
-            var darkField = type.GetField("s_DefaultCommonDarkStyleSheet", BindingFlags.Static | BindingFlags.NonPublic);
-            var lightField = type.GetField("s_DefaultCommonLightStyleSheet", BindingFlags.Static | BindingFlags.NonPublic);
+            var darkField = type.GetField("s_DefaultCommonDarkStyleSheet",
+                BindingFlags.Static | BindingFlags.NonPublic);
+            var lightField = type.GetField("s_DefaultCommonLightStyleSheet",
+                BindingFlags.Static | BindingFlags.NonPublic);
 
             if (darkField == null || lightField == null) return;
 
@@ -38,17 +41,17 @@ namespace Mukuro.Editors
             defaultCommonDarkStyleSheet = (StyleSheet) darkField.GetValue(null);
             defaultCommonLightStyleSheet = (StyleSheet) lightField.GetValue(null);
         }
-        
+
         public static void ShowWindow(EventScriptAsset scriptAsset)
         {
-            
             var window = EditorWindow.GetWindow(typeof(EventScriptEditorWindow)) as EventScriptEditorWindow;
             window.Init(scriptAsset);
-
         }
 
         private VisualElement commandList;
-        private CommandListView rootCommandListView;
+
+        //private CommandListView rootCommandListView;
+        private CommandEditorDomain domain;
 
         private EventScriptAsset target;
         private UnityEngine.Object contextObject;
@@ -91,16 +94,16 @@ namespace Mukuro.Editors
         private void Init(EventScriptAsset scriptAsset, UnityEngine.Object context)
         {
             selectedAssetGUID = AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(scriptAsset));
-            
+
             target = scriptAsset;
             VisualTreeAsset uiAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(visualTreeAssetPath);
             VisualElement root = uiAsset.CloneTree();
 
             GetSkins();
-            
+
             rootVisualElement.styleSheets.Clear();
             rootVisualElement.styleSheets.Add(defaultCommonDarkStyleSheet);
-            
+
             root.style.flexGrow = 1f;
 
             SerializedObject sObj;
@@ -119,6 +122,7 @@ namespace Mukuro.Editors
             //メニューボタンのハンドラ
             root.Q<Button>("RefreshButton").clickable.clicked += Refresh;
             root.Q<Button>("SaveAssetButton").clickable.clicked += SaveAsset;
+            root.Q<Button>("SelectButton").clickable.clicked += () => { EditorGUIUtility.PingObject(scriptAsset); };
             var contextObjectField = root.Q<ObjectField>("ContextObject");
             contextObjectField.objectType = typeof(EventRuntimeReferenceHost);
             contextObjectField.value = context;
@@ -156,7 +160,11 @@ namespace Mukuro.Editors
             //コマンドリストの構築
             commandList = root.Q<VisualElement>("CommandList");
             commandList.Clear();
-            rootCommandListView = new CommandListView(OnItemSelected, commandsProperty);
+
+            domain = new CommandEditorDomain(commandsProperty, OnItemSelected);
+
+            var rootCommandListView =
+                domain.RootCommandListView; //new CommandListView(OnItemSelected, commandsProperty);
 
             rootCommandListView.style.paddingBottom = 100f;
 
@@ -202,15 +210,36 @@ namespace Mukuro.Editors
                     categories.Add(category, foldout);
                 }
 
+                var commandType = definedCommand.Value;
+
+
                 var button = new Button() {text = definedCommand.Key.DisplayName};
                 button.clickable.clicked += () =>
                 {
-                    var command = Activator.CreateInstance(definedCommand.Value) as EventCommand;
-                    var newCommand = rootCommandListView.AddCommandAtSelected(command);
+                    var command = Activator.CreateInstance(commandType) as EventCommand;
+                    var newCommand = domain.AddCommandAtSelected(command);
                     //選択
                     newCommand.Select();
                 };
                 categories[category].Add(button);
+                
+                var editorType = EventCommandUtility.GetCommandEditorType(commandType);
+
+                if (editorType == null) continue;
+
+                var editorAttribute = editorType.GetCustomAttributes(typeof(CustomEventCommandEditorAttribute))
+                    .OfType<CustomEventCommandEditorAttribute>().FirstOrDefault();
+
+                var path = editorAttribute.IconTexturePath;
+
+                if (!string.IsNullOrEmpty(path))
+                {
+                    var iconTexture = AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+                    var icon = new Image {image = iconTexture};
+                    icon.style.width = new StyleLength(new Length(16f, LengthUnit.Pixel));
+                    icon.style.height = new StyleLength(new Length(16f, LengthUnit.Pixel));
+                    button.Add(icon);
+                }
             }
 
             //キーボードショートカット
@@ -218,7 +247,7 @@ namespace Mukuro.Editors
             {
                 if (evt.keyCode == KeyCode.Delete)
                 {
-                    rootCommandListView.RemoveCommandAtSelected();
+                    domain.RemoveCommandAtSelected();
                 }
             });
 

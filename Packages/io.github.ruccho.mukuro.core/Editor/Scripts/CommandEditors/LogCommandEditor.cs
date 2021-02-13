@@ -6,17 +6,17 @@ using UnityEngine.UIElements;
 
 namespace Mukuro.Editors
 {
-    [CustomEventCommandEditor(typeof(LogCommand))]
+    [CustomEventCommandEditor(typeof(LogCommand), IconTexturePath = iconPath)]
     public class LogEditor : EventCommandEditor
     {
-        
+        private const string iconPath =
+            "Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/Icons/Log.png";
         private static Texture2D Icon { get; set; }
 
         private static void EnsureIconLoaded()
         {
             if (Icon == null)
-                Icon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-                    "Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/Icons/Log.png");
+                Icon = AssetDatabase.LoadAssetAtPath<Texture2D>(iconPath);
         }
 
         public override Texture2D GetIcon()

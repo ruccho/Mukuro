@@ -8,9 +8,12 @@ using UnityEngine.UIElements;
 
 namespace Mukuro.Dialog.Editors
 {
-    [CustomEventCommandEditor(typeof(DialogShowMenuCommand))]
+    [CustomEventCommandEditor(typeof(DialogShowMenuCommand), IconTexturePath = iconPath)]
     public class DialogShowMenuCommandEditor : EventCommandEditor
     {
+
+        private const string iconPath =
+            "Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/Icons/DialogShowMenu.png";
         private VisualElement CommandEditorRoot { get; set; }
         private List<Foldout> DefaultLabel { get; } = new List<Foldout>();
 
@@ -19,8 +22,7 @@ namespace Mukuro.Dialog.Editors
         private static void EnsureIconLoaded()
         {
             if (Icon == null)
-                Icon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-                    "Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/Icons/DialogShowMenu.png");
+                Icon = AssetDatabase.LoadAssetAtPath<Texture2D>(iconPath);
         }
         
         public DialogShowMenuCommandEditor(CommandItem commandItem, VisualElement customDetailRoot) : base(commandItem,

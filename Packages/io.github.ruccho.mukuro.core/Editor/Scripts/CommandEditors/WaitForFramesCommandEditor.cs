@@ -6,16 +6,17 @@ using UnityEngine.UIElements;
 
 namespace Mukuro.Editors
 {
-    [CustomEventCommandEditor(typeof(WaitForFramesCommand))]
+    [CustomEventCommandEditor(typeof(WaitForFramesCommand), IconTexturePath = iconPath)]
     public class WaitForFramesCommandEditor : EventCommandEditor
     {
+        private const string iconPath =
+            "Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/Icons/Wait.png";
         private static Texture2D Icon { get; set; }
 
         private static void EnsureIconLoaded()
         {
             if (Icon == null)
-                Icon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-                    "Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/Icons/Wait.png");
+                Icon = AssetDatabase.LoadAssetAtPath<Texture2D>(iconPath);
         }
 
         public override Texture2D GetIcon()

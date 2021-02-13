@@ -7,16 +7,17 @@ using UnityEngine.UIElements;
 
 namespace Mukuro.Editors
 {
-    [CustomEventCommandEditor(typeof(CalculationCommand))]
+    [CustomEventCommandEditor(typeof(CalculationCommand), IconTexturePath = iconPath)]
     public class CalculationCommandEditor : EventCommandEditor
     {
+        private const string iconPath =
+            "Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/Icons/Calculation.png";
         private static Texture2D Icon { get; set; }
 
         private static void EnsureIconLoaded()
         {
             if (Icon == null)
-                Icon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-                    "Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/Icons/Calculation.png");
+                Icon = AssetDatabase.LoadAssetAtPath<Texture2D>(iconPath);
         }
 
         public override Texture2D GetIcon()

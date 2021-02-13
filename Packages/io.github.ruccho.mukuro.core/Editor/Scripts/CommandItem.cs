@@ -15,20 +15,26 @@ namespace Mukuro.Editors
         private static readonly string visualTreeAssetPath =
             "Packages/io.github.ruccho.mukuro.core/Editor/Layout/CommandItem.uxml";
 
+        public CommandEditorDomain Domain { get; }
         public EventCommandEditor Editor { get; private set; }
 
         public PersistentSerializedProperty CommandProperty { get; private set; }
 
         public CommandListView ParentList { get; }
-        private Action<CommandItem> OnSelect;
 
-        public CommandItem(CommandListView parentList, PersistentSerializedProperty property,
-            Action<CommandItem> onSelect,
+        public CommandItem(CommandEditorDomain domain, CommandListView parentList,
+            PersistentSerializedProperty property,
             Action<CommandItem, CommandListView, int> onMove) : base()
         {
+            Domain = domain;
             ParentList = parentList;
             CommandProperty = property;
-            OnSelect = onSelect;
+
+            this.binding = new CommandItemBinding(() =>
+            {
+                if (this != Domain.SelectedItem) return;
+                UpdateCommandDetail();
+            });
 
             VisualTreeAsset uiAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(visualTreeAssetPath);
             VisualElement root = uiAsset.CloneTree();
@@ -82,14 +88,14 @@ namespace Mukuro.Editors
                 propEnabled.serializedObject.ApplyModifiedProperties();
             });
 
-            string typeName = GetTypeName();
+            //string typeName = GetTypeName();
 
             var customContentContainer = this.Q<VisualElement>("CommandCustomDetailContent");
             customContentContainer.Clear();
-            Editor = CreateEditor(typeName, this, customContentContainer);
+            Editor = CreateEditor(GetCommandType(), this, customContentContainer);
             UpdateCommandDetail();
         }
-
+/*
         private string GetTypeName()
         {
             var prop = CommandProperty.GetProperty();
@@ -104,6 +110,26 @@ namespace Mukuro.Editors
                 return "";
             }
         }
+        */
+
+        private Type GetCommandType()
+        {
+            var prop = CommandProperty.GetProperty();
+            var typeInfo = prop.managedReferenceFullTypename.Split(' ');
+
+            if (typeInfo.Length != 2)
+            {
+                return null;
+            }
+
+            var assemblyName = typeInfo[0];
+            var typeName = typeInfo[1];
+
+            var assembly = AppDomain.CurrentDomain.GetAssemblies()
+                .FirstOrDefault(a => a.GetName().Name == assemblyName);
+            if (assembly == null) return null;
+            return assembly.GetType(typeName);
+        }
 
         public void UpdateCommandDetail()
         {
@@ -111,7 +137,7 @@ namespace Mukuro.Editors
             {
                 var label = this.Q<Label>("CommandLabel");
                 label.text = Editor.GetLabelText();
-                
+
                 Color? c = Editor.GetLabelColor();
                 if (c != null)
                 {
@@ -129,7 +155,7 @@ namespace Mukuro.Editors
                     iconImage.style.backgroundImage = icon;
                     iconImage.style.width = 16f;
                 }
-                
+
 
                 var prop = CommandProperty.GetProperty();
 
@@ -143,7 +169,7 @@ namespace Mukuro.Editors
                     enabledToggle.value = false;
                     enabledToggle.SetEnabled(false);
                 }
-                
+
                 Editor.OnUpdate();
             }
         }
@@ -155,69 +181,20 @@ namespace Mukuro.Editors
 
         public void Select()
         {
-            OnSelect(this);
+            Domain.SelectItem(this);
         }
 
-        private static EventCommandEditor CreateEditor(string typeName, CommandItem item,
+        private static EventCommandEditor CreateEditor(Type commandType, CommandItem item,
             VisualElement customContentContainer)
         {
             EventCommandEditor editor = null;
-            if (!string.IsNullOrEmpty(typeName))
+            if (commandType != null)
             {
-                var mukuroEditorAssemblyFullName = Assembly.GetAssembly(typeof(EventCommandEditor)).FullName;
-                var assemblies = AppDomain.CurrentDomain.GetAssemblies().Where(a =>
-                    a.GetReferencedAssemblies()
-                        .FirstOrDefault(
-                            n => n.FullName == mukuroEditorAssemblyFullName
-                        ) != default || a.FullName == mukuroEditorAssemblyFullName
-                );
+                var editorType = EventCommandUtility.GetCommandEditorType(commandType);
 
-                IEnumerable<Type> editorTypes = null;
-                foreach (var assembly in assemblies)
-                {
-                    var typesInAssembly =
-                        assembly
-                            .GetTypes().Where(t =>
-                            {
-                                return t.IsSubclassOf(typeof(EventCommandEditor)) && !t.IsAbstract;
-                            });
-
-                    if (editorTypes == null)
-                    {
-                        editorTypes = typesInAssembly;
-                    }
-                    else
-                    {
-                        editorTypes = editorTypes.Concat(typesInAssembly);
-                    }
-                }
-
-                foreach (var editorType in editorTypes)
-                {
-                    object[] attributes =
-                        editorType.GetCustomAttributes(typeof(CustomEventCommandEditorAttribute), false);
-                    if (attributes == null || attributes.Length == 0)
-                    {
-                        //No Custom Attributes
-                        continue;
-                    }
-                    else
-                    {
-                        //該当TypeのAttributeを取得
-                        var matches = attributes.Where((a) =>
-                            (a as CustomEventCommandEditorAttribute).CommandType.FullName == typeName);
-                        if (matches.Count() == 0)
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            editor =
-                                Activator.CreateInstance(editorType, item, customContentContainer) as
-                                    EventCommandEditor;
-                        }
-                    }
-                }
+                if (editorType != null)
+                    editor = Activator.CreateInstance(editorType, item, customContentContainer) as
+                        EventCommandEditor;
             }
 
 
@@ -234,18 +211,19 @@ namespace Mukuro.Editors
 
         public void OnSelected()
         {
-            //Debug.Log(Property.propertyPath);
             if (defaultBackgroundColor == default)
                 defaultBackgroundColor = this.style.backgroundColor.value;
             this.style.backgroundColor = new StyleColor(new Color(0.172549f, 0.3647059f, 0.5294118f));
-            
+
             Editor?.OnUpdate();
-            //UpdateCommandDetail();
+
+            //this.Bind(CommandProperty.SerializedObject);
         }
 
         public void OnDeselected()
         {
             this.style.backgroundColor = new StyleColor(defaultBackgroundColor);
+            //this.Unbind();
         }
     }
 
@@ -279,9 +257,9 @@ namespace Mukuro.Editors
         {
             if (currentMoving == null) return;
             if (currentHovering == null) return;
-            
+
             currentHovering.ReleaseHovering();
-            
+
             var index = currentHovering.GetIndexFunc(currentPart);
             var list = currentHovering.CommandList;
 
@@ -306,7 +284,8 @@ namespace Mukuro.Editors
         private Action OnHoverRelease { get; }
         public Func<MovementPart, int> GetIndexFunc { get; }
 
-        public CommandMoveTargetManipulator(CommandListView list, Func<MovementPart, int> getIndexFunc, Action onHoverTop,
+        public CommandMoveTargetManipulator(CommandListView list, Func<MovementPart, int> getIndexFunc,
+            Action onHoverTop,
             Action onHoverBottom,
             Action onHoverRelease)
         {
@@ -415,6 +394,30 @@ namespace Mukuro.Editors
         public void Move(CommandListView dest, int index)
         {
             CommandListView.Move(target as CommandItem, dest, index);
+        }
+    }
+
+
+    public class CommandItemBinding : IBinding
+    {
+        private Action OnUpdate;
+
+        public CommandItemBinding(Action onUpdate)
+        {
+            OnUpdate = onUpdate;
+        }
+
+        public void PreUpdate()
+        {
+        }
+
+        public void Update()
+        {
+            OnUpdate?.Invoke();
+        }
+
+        public void Release()
+        {
         }
     }
 }
