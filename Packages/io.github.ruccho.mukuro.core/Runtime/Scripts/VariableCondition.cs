@@ -9,16 +9,15 @@ namespace Mukuro
     [Serializable]
     public class VariableCondition
     {
-
-        [SerializeReference, VariableReference.TypeSelectableAttribute]
+        [SerializeReference, VariableReference.TypeSelectable]
         private VariableReference left = default;
 
-        [SerializeReference, VariableReference.TypeSelectableAttribute]
+        [SerializeReference, VariableReference.TypeSelectable]
         private VariableReference right = default;
-        
+
         [SerializeField] private ConditionOperatorType conditionOperator = ConditionOperatorType.Equal;
-        
-        public bool Evaluate(IVariableStoreContainer context)
+
+        public bool Evaluate(IVariableStoreContainer context, bool onFailedValue = false)
         {
             if (left.Evaluate(context, out var leftValue) && right.Evaluate(context, out var rightValue))
             {
@@ -60,13 +59,13 @@ namespace Mukuro
             else
             {
                 Debug.LogWarning("変数の評価に失敗しました");
-                return false;
+                return onFailedValue;
             }
         }
 
         public SubscriptionHandle SubscribeOnUpdatedEventVariables(IVariableStore store, Action onUpdated)
         {
-            if(right == null || left == null) throw new NullReferenceException("式が不正です。");
+            if (right == null || left == null) throw new NullReferenceException("式が不正です。");
             if (left.StoreType == VariableReferenceType.Temporary || right.StoreType == VariableReferenceType.Temporary)
             {
                 Debug.LogError("一時変数を含むConditionのウォッチは出来ません");
@@ -80,11 +79,12 @@ namespace Mukuro
             {
                 leftHandle = store.SubscribeOnUpdated<object>(left.Key, _ => onUpdated());
             }
-            
+
             if (right.StoreType == VariableReferenceType.Event)
             {
                 rightHandle = store.SubscribeOnUpdated<object>(right.Key, _ => onUpdated());
             }
+
             return new SubscriptionHandle(() =>
             {
                 leftHandle.Dispose();

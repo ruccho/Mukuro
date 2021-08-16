@@ -70,8 +70,9 @@ namespace Mukuro.Dialog
 
         private void Next()
         {
-            onNext?.Invoke();
+            var n = onNext;
             onNext = null;
+            n?.Invoke();
         }
         
     }

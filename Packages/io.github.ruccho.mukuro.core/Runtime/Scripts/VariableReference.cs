@@ -20,7 +20,7 @@ namespace Mukuro
         public abstract bool Evaluate(IVariableStoreContainer context, out object value);
         public abstract void SetValue(IVariableStoreContainer context, object value);
 
-        public class TypeSelectableAttribute : Attribute
+        public class TypeSelectableAttribute : PropertyAttribute
         {
         }
     };

@@ -10,12 +10,14 @@ namespace Mukuro
         [SerializeField] private bool waitForAllCommand = default;
         [SerializeField] private VariableCondition condition = default;
         [SerializeField] private EventCommandList ifTrue = default;
-
         [SerializeField] private EventCommandList ifFalse = default;
+
+        //評価失敗時の値
+        [SerializeField] private bool onFailed = false;
 
         public override void Execute(EventExecutionContext context, CommandExecutionHandle handle)
         {
-            if (condition.Evaluate(context))
+            if (condition.Evaluate(context, onFailed))
             {
                 var script = new EventScript();
                 script.CommandList = ifTrue;

@@ -44,7 +44,7 @@ namespace Mukuro.Editors
         public override string GetLabelText()
         {
             var prop = CommandItem.CommandProperty.GetProperty();
-            var vProp = prop.FindPropertyRelative("count").FindPropertyRelative("variable");
+            var vProp = prop.FindPropertyRelative("count");
             var v = VariableReferencePropertyDrawer.GetDescription(vProp);
             return $"回数繰り返し (変数) : {v}";
         }

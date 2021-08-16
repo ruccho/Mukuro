@@ -22,6 +22,12 @@ namespace Mukuro.Dialog.Editors
                 Icon = AssetDatabase.LoadAssetAtPath<Texture2D>(iconPath);
         }
 
+        public override Texture2D GetIcon()
+        {
+            EnsureIconLoaded();
+            return Icon;
+        }
+
         public DialogSessionCommandEditor(CommandItem commandItem, VisualElement customDetailRoot) : base(commandItem,
             customDetailRoot)
         {
@@ -45,15 +51,19 @@ namespace Mukuro.Dialog.Editors
             return null;
         }
 
-        public override Texture2D GetIcon()
-        {
-            EnsureIconLoaded();
-            return Icon;
-        }
-
         public override void OnCreated()
         {
             BuildNestedCommandList();
+        }
+
+        private void BuildNestedCommandList()
+        {
+            var commandProp = CommandItem.CommandProperty;
+            var nestedCommandProp = commandProp.GetChildProperty("commandList.commands");
+            CustomDetailRoot.Clear();
+            var commandListView = new CommandListView(CommandItem.ParentList, nestedCommandProp);
+
+            CustomDetailRoot.Add(commandListView);
         }
 
         public override void OnUpdate()
@@ -68,16 +78,6 @@ namespace Mukuro.Dialog.Editors
             
             root.Bind(CommandItem.CommandProperty.SerializedObject);
             return root;
-        }
-
-        private void BuildNestedCommandList()
-        {
-            var commandProp = CommandItem.CommandProperty;
-            var nestedCommandProp = commandProp.GetChildProperty("commandList.commands");
-            CustomDetailRoot.Clear();
-            var commandListView = new CommandListView(CommandItem.ParentList, nestedCommandProp);
-
-            CustomDetailRoot.Add(commandListView);
         }
     }
 }

@@ -25,10 +25,26 @@
     <list default="true" id="158aaec2-01e2-4295-b2e2-1fc29e5d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mukuro/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mukuro/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mukuro/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mukuro/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mukuro/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mukuro/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mukuro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mukuro/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mukuro/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mukuro/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Layout/EventScriptEditor.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Layout/EventScriptEditor.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/ForVariableCommandEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/ForVariableCommandEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/IfVariableCommandEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/IfVariableCommandEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/EventScriptAssetEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/EventScriptAssetEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/EventScriptEditorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/EventScriptEditorWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableCalculationPropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableCalculationPropertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableConditionEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableConditionEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/ForVariableCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/ForVariableCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/IfVariableCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/IfVariableCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventRuntimeReferenceHost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventRuntimeReferenceHost.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableCondition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableReference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogSessionCommandEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogSessionCommandEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/DialogShowMessageSettingsEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/DialogShowMessageSettingsEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/Fade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/Fade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/RegularWindowedDialogProvider/MessageWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/RegularWindowedDialogProvider/MessageWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,126 +58,129 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/8a/f5e2b9b0/EditorGUIUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/3f/1dd3e91c/PlayerLoopSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/fb/03f53ac2/Clickable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogClosingSessionCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogShowMenuCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogShowMessageCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/DialogProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/ISpeakerInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/SpeakerInfoAsset.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/package.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../ExposedUnityEvent/Packages/io.github.ruccho.exposedunityevent/Editor/Scripts/ExposedUnityEventPropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/CalculationCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/ForVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/LogCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/LogVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/WaitCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/WaitForFramesCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/WhileVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/EventCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/IScriptVariablesDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableConditionEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableCalculationPropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/NestEventScriptCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogClosingSessionCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogSessionCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogShowMenuCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../ExposedUnityEvent/Packages/io.github.ruccho.exposedunityevent/Editor/Scripts/TypeRestrictedExposedReferenceDrawer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Timer/MukuroPlayerLoopRegisterer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.18/Editor/Signals/SignalManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/af/24a76bd8/Camera.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Timer/Timer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../ExposedUnityEvent/Packages/io.github.ruccho.exposedunityevent/Runtime/Scripts/ExposedInvokableCall.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/Events/Event00006_Calculation.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../ExposedUnityEvent/Packages/io.github.ruccho.exposedunityevent/Editor/Scripts/ExposedUnityEventPropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/11BD515F-D2A0-4526-8509-D23726DE0F46/02/10b3f8fe/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../ExposedUnityEvent/Packages/io.github.ruccho.exposedunityevent/Runtime/Scripts/TypeRestrictedExposedReferenceAttribute.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/PersistentSerializedProperty/PersistentSerializedProperty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../ExposedUnityEvent/Packages/io.github.ruccho.exposedunityevent/Editor/Scripts/ExposedInvokableCallPropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../ExposedUnityEvent/Packages/io.github.ruccho.exposedunityevent/Editor/Scripts/TypeRestrictedExposedReferenceDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/63/b7977a92/VisualTreeAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/a0/267010e1/CameraEditor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../ExposedUnityEvent/Packages/io.github.ruccho.exposedunityevent/Editor/Scripts/ExposedInvokableCallPropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../ExposedUnityEvent/Packages/io.github.ruccho.exposedunityevent/Runtime/Scripts/ExposedInvokableCall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/a0/ee90a706/EditorWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableCondition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/a3/e35a322c/Unsupported.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/9f/6ef331ad/UIElementsEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../ExposedUnityEvent/Packages/io.github.ruccho.exposedunityevent/Runtime/Scripts/TypeRestrictedExposedReferenceAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/2c/64f39cce/EditorResources.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/EventCommands/3/SampleEventCommand3.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/EventCommands/2/Editor/SampleEventCommand2Editor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/EventCommands/3/Editor/SampleEventCommand3Editor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogSessionCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogClosingSessionCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/11BD515F-D2A0-4526-8509-D23726DE0F46/6f/ff48c838/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableReference.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/50FE65A4-93A0-4952-84F1-E3562EFBE38D/f1/1a9f65e3/Type.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventExecutionContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogShowMessageCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogShowMenuCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogShowMessageCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/TalkStyleDialogProvider/TalkStyleDialogMenuPop.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/TalkStyleDialogProvider/TalkStyleDialogProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/CommandExecutionHandle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/EventCommands/3/Editor/SampleEventCommand3Editor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventCommandAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogClosingSessionCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/ScriptExecutionSession.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogSessionCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/RegularWindowedDialogProvider/MenuWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.18/Runtime/TimelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/TalkStyleDialogProvider/TalkStyleDialogMessagePop.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableReferencePropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableConditionEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptAsset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableCalculation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.18/Runtime/TimelinePlayable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/EventScriptEditorWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/7f/95e66cd3/VisualElementStyleSheetSet.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandListView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/SetVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/IfVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventCommandList.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/IScriptVariablesDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptAsset.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/ff/9de50277/UIElementsEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableCondition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableReference.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventExecutionContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/ScriptExecutionSession.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/IfVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/ad/77b4c2bd/EditorWindow.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogShowMessageCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/DialogModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogSessionCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4A3ACBF9-5658-4327-8F33-A8C814FDDBD1/c8/6f2ba9e6/NativePropertyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/58/c144c5a6/VisualElement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/RegularSpeakerInfoAsset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/RegularWindowedDialogProvider/MessageWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/c6/066eb19e/SystemLanguage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/RegularWindowedDialogProvider/RegularWindowedDialogProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/RegularWindowedDialogProvider/MenuWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/EventCommands/2/Editor/SampleEventCommand2Editor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/WaitForFramesCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/ff/9de50277/UIElementsEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/EventCommands/3/SampleEventCommand3.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/CalculationCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/Events/Event00006_Calculation.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/ad/77b4c2bd/EditorWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/ISpeakerInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/SpeakerInfoAsset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/DialogModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.timeline/Editor/Mukuro/CommandEditors/WaitForSignalCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4A3ACBF9-5658-4327-8F33-A8C814FDDBD1/c8/6f2ba9e6/NativePropertyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9F342DAB-4758-43C6-B2D1-D3F3154F8D67/bd/6adefc74/PlayableOutputExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.18/Runtime/Events/Signals/SignalAsset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.18/Runtime/Events/Signals/SignalReceiver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/RegularSpeakerInfoAsset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/58/c144c5a6/VisualElement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/DialogProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/TalkStyleDialogProvider/TalkStyleDialogProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9F342DAB-4758-43C6-B2D1-D3F3154F8D67/d0/b7d2a6b3/PlayableAsset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/c6/066eb19e/SystemLanguage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/UIEventTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/PersistentSerializedProperty/PersistentSerializedProperty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9F342DAB-4758-43C6-B2D1-D3F3154F8D67/c3/4440405e/PlayableOutputHandle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventRuntimeReferenceHost.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/39/37b87891/LocalizationDatabase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/NestEventScriptCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4BEC26B5-CBC7-4715-8442-F1499E984732/bd/2524e332/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.timeline/Editor/Mukuro/CommandEditors/ControlTimelineCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/SetVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/TaskExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/6a/ba3774fb/ToolbarButton.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/NestEventScriptCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/EventCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/ExposedUnityEventCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/CalculationCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogShowMenuCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/61/f3544011/Toggle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/ForVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/WaitForFramesCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/IfVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/cf/26fb8055/BindableElement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/SetVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/VariableReferencePropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/e2/4f298538/BaseField`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/2d/d98f733c/IBinding.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/b6/1cd3fae5/EditorResources.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/d0/876d8c0c/IBindable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/fa/c925c606/BindingExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/53/5d8d547c/ListView.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/78/947551f8/EditorGUI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../PixelSorting/Assets/Ruccho/PixelSorting/PixelSortingBitonic.compute" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/54/2ef3cf4e/PropertyDrawer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Mukuro/Samples/UIEventTrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/8a/b476278c/PropertyHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/a0/72186154/PlayerLoop.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/f6/c67ea5d7/ScriptAttributeUtility.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/CalculationCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/ExposedUnityEventCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/ForVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/LogVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/NestEventScriptCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/SetVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/WaitCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/WaitForFramesCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/WhileVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/CommandExecutionHandle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventCommandAttribute.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventRuntimeReferenceHost.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/TaskExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableCalculation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Timer/MukuroPlayerLoopRegisterer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/LogCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/d0/876d8c0c/IBindable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/WhileVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/fa/c925c606/BindingExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/WaitCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/LogVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/ForVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BE1A95B-44F5-474C-9C1A-5C5FD9C86B28/53/5d8d547c/ListView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/LogVariableCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/78/947551f8/EditorGUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.timeline/Runtime/Mukuro/Commands/ControlTimelineCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/WaitCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Timer/Timer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/54/2ef3cf4e/PropertyDrawer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/8a/b476278c/PropertyHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.timeline/Editor/Mukuro/CommandEditors/StartTimelineCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/a0/72186154/PlayerLoop.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/IfVariableCommandEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventCommandList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90D4BCB0-03FB-405F-B092-41AED2F178AA/f6/c67ea5d7/ScriptAttributeUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/VariableReferenceTypeSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandListView.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Editor/Scripts/CommandEditors/NestEventScriptCommandEditor.cs" />
-        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/ISpeakerInfo.cs" />
-        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/CommandExecutionHandle.cs" />
-        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Dialog/RegularWindowedDialogProvider/MenuWindow.cs" />
-        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/DialogShowMenuCommand.cs" />
-        <option value="$PROJECT_DIR$/Assets/Mukuro/Samples/TalkStyleDialogProvider/TalkStyleDialogMenuPop.cs" />
-        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogSessionCommandEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Mukuro/Samples/TalkStyleDialogProvider/TalkStyleDialogMessagePop.cs" />
         <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/package.json" />
         <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/Commands/NestEventScriptCommand.cs" />
         <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptPlayer.cs" />
@@ -205,6 +224,14 @@
         <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.core/Runtime/Scripts/EventScriptAsset.cs" />
         <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Runtime/Mukuro/Commands/FadeInCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/Mukuro/Samples/UIEventTrigger.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.timeline/Runtime/Mukuro/TimelineModule.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.timeline/Runtime/Mukuro/Commands/StartTimelineCommand.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.dialog/Editor/Mukuro/CommandEditors/DialogSessionCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.timeline/Editor/Mukuro/CommandEditors/StartTimelineCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.timeline/Editor/Mukuro/CommandEditors/WaitForSignalCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.timeline/Editor/Mukuro/CommandEditors/ControlTimelineCommandEditor.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.timeline/Runtime/Mukuro/Commands/WaitForSignalCommand.cs" />
+        <option value="$PROJECT_DIR$/Packages/io.github.ruccho.mukuro.timeline/Runtime/Mukuro/Commands/ControlTimelineCommand.cs" />
       </list>
     </option>
   </component>
@@ -275,6 +302,7 @@
       <workItem from="1599405849673" duration="1244000" />
       <workItem from="1602150842568" duration="4928000" />
       <workItem from="1605148926375" duration="4109000" />
+      <workItem from="1629122532867" duration="6762000" />
     </task>
     <servers />
   </component>
@@ -299,24 +327,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="763" y="235" key="RiderGenerateDialog" timestamp="1599377527153">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1629128473768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1157" y="235" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598890377733" />
-    <state x="763" y="235" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599377527153" />
-    <state x="2388" y="164" key="SettingsEditor" timestamp="1605161931605">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2388" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605161931605" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1599387965921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599387965921" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605162094502">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602150902935" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599388032712" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605162094502" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1629128473768" />
   </component>
 </project>

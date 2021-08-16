@@ -1,0 +1,18 @@
+{
+    "name": "Mukuro.Timeline",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a6d494cbe211056418cbeebd977327fc",
+        "GUID:f06555f75b070af458a003d92f9efb00",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

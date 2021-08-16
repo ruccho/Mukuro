@@ -6,10 +6,8 @@ using UnityEngine.SceneManagement;
 
 namespace Mukuro
 {
-
     public abstract class EventScriptPlayerBase : MonoBehaviour
     {
-        
         [SerializeField] protected bool showDebugGui = false;
 
         [SerializeField] protected List<EventScriptPlayerModule> modules;
@@ -84,6 +82,8 @@ namespace Mukuro
 
         public T GetModule<T>() where T : EventScriptPlayerModule
         {
+            EnsureInitialized();
+
             if (Modules.TryGetValue(typeof(T), out var result))
             {
                 return result as T;
@@ -98,8 +98,6 @@ namespace Mukuro
         protected virtual void OnInitialized()
         {
         }
-
-
     }
 
     public abstract class EventScriptPlayer<T> : EventScriptPlayerBase where T : EventPlayingOption
@@ -121,20 +119,19 @@ namespace Mukuro
             context.Play(option.Script, () =>
                 {
                     Debug.Log("EventScriptPlayer: End.");
-                    OnCompleteEvent(context);
+                    OnCompleteEvent(context, option);
                     CurrentContext = null;
                 },
                 (exception) =>
                 {
                     Debug.Log("EventScriptPlayer: Error.");
                     CurrentContext = null;
-                    OnErrorEvent(context);
+                    OnErrorEvent(context, option);
                     //TODO: Modulesに対するエラー通知
-                }, option.RuntimeReferenceHost, option.EventVariables, option.TemporaryVariables, () => OnPlayEvent(context, option));
-            
-            
+                }, option.RuntimeReferenceHost, option.EventVariables, option.TemporaryVariables,
+                () => OnPlayEvent(context, option));
         }
-        
+
         /// <summary>
         /// イベントの再生前に呼ばれる。
         /// </summary>
@@ -146,7 +143,7 @@ namespace Mukuro
         /// イベントの再生が正常に終わったときに呼ばれる。
         /// </summary>
         /// <param name="context"></param>
-        protected virtual void OnCompleteEvent(EventExecutionContext context)
+        protected virtual void OnCompleteEvent(EventExecutionContext context, T option)
         {
         }
 
@@ -155,14 +152,13 @@ namespace Mukuro
         /// イベントの再生がエラーで終了したときに呼ばれる。
         /// </summary>
         /// <param name="context"></param>
-        protected virtual void OnErrorEvent(EventExecutionContext context)
+        protected virtual void OnErrorEvent(EventExecutionContext context, T option)
         {
         }
     }
-    
+
     public class EventScriptPlayer : EventScriptPlayer<EventPlayingOption>
     {
-        
     }
 
     public class EventPlayingOption
@@ -170,6 +166,7 @@ namespace Mukuro
         public EventScriptAsset ScriptAsset { get; }
 
         private EventScript script;
+
         public EventScript Script
         {
             get
@@ -178,16 +175,17 @@ namespace Mukuro
                 return script;
             }
         }
-        public IVariableStore TemporaryVariables{ get; set; }
-        public IVariableStore EventVariables{ get; set; }
-        public Scene SceneForRuntimeReference{ get; set; }
-        public EventRuntimeReferenceHost RuntimeReferenceHost{ get; set; }
+
+        public IVariableStore TemporaryVariables { get; set; }
+        public IVariableStore EventVariables { get; set; }
+        public Scene SceneForRuntimeReference { get; set; }
+        public EventRuntimeReferenceHost RuntimeReferenceHost { get; set; }
 
         public EventPlayingOption(EventScriptAsset script)
         {
             ScriptAsset = script;
         }
-        
+
         public EventPlayingOption(EventScript script)
         {
             this.script = script;
@@ -209,6 +207,7 @@ namespace Mukuro
                 if (ScriptAsset == null) return false;
                 EventVariables = eventVariableDatabase.GetStore(ScriptAsset.Id);
             }
+
             if (TemporaryVariables == null) TemporaryVariables = new RegularVariableStore();
 
             return true;

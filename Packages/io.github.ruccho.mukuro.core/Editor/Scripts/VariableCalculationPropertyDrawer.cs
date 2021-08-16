@@ -57,9 +57,9 @@ namespace Mukuro.Editors
             var b = root.Q("BoxB");
             var c = root.Q("BoxC");
             var p = new TypeSelectableVariableReferencePropertyDrawer();
-            var aField = p.CreatePropertyGUI(property.FindPropertyRelative("left"));
-            var bField = p.CreatePropertyGUI(property.FindPropertyRelative("right0"));
-            var cField = p.CreatePropertyGUI(property.FindPropertyRelative("right1"));
+            var aField = new PropertyField(property.FindPropertyRelative("left"));
+            var bField = new PropertyField(property.FindPropertyRelative("right0"));
+            var cField = new PropertyField(property.FindPropertyRelative("right1"));
 
             var operatorButton = root.Q<Button>("OperatorButton");;
             var operatorProp = property.FindPropertyRelative("calculationOperator");

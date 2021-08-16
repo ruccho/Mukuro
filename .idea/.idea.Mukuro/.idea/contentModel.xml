@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\nobor\AppData\local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\nobor\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\Rider\v202\SolutionCaches\_Mukuro.1600564295.00" t="ExcludeRecursive" />
-    <e p="C:\Users\nobor\Documents\development\repositories\Mukuro\Mukuro" t="IncludeRecursive">
+    <e p="C:\Users\nobor\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\Rider\v202\SolutionCaches\_Mukuro.-1421158003.00" t="ExcludeRecursive" />
+    <e p="C:\Users\nobor\Documents\development\repositories\OverRay\Mukuro\Mukuro" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -40,8 +40,46 @@
       <e p="Mukuro.Dialog.Editors.csproj" t="IncludeRecursive" />
       <e p="Mukuro.Editors.csproj" t="IncludeRecursive" />
       <e p="Mukuro.sln" t="IncludeFlat" />
+      <e p="Mukuro.Timeline.csproj" t="IncludeRecursive" />
+      <e p="Mukuro.Timeline.Editors.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive">
+        <e p="graph-visualizer-master" t="Include">
+          <e p="Editor" t="Include">
+            <e p="Graph" t="Include">
+              <e p="Graph.cs" t="Include" />
+              <e p="Layouts" t="Include">
+                <e p="IGraphLayout.cs" t="Include" />
+                <e p="ReingoldTilford.cs" t="Include" />
+              </e>
+              <e p="Node.cs" t="Include" />
+              <e p="Renderer" t="Include">
+                <e p="DefaultGraphRenderer.cs" t="Include" />
+                <e p="IGraphRenderer.cs" t="Include" />
+              </e>
+            </e>
+            <e p="PlayableGraphVisualizer.cs" t="Include" />
+            <e p="PlayableGraphVisualizerWindow.cs" t="Include" />
+            <e p="PlayableNodes" t="Include">
+              <e p="AnimationClipPlayableNode.cs" t="Include" />
+              <e p="AnimationLayerMixerPlayableNode.cs" t="Include" />
+              <e p="PlayableNode.cs" t="Include" />
+              <e p="PlayableOutputNode.cs" t="Include" />
+              <e p="SharedPlayableNode.cs" t="Include" />
+            </e>
+            <e p="Unity.PlayableGraphVisualizer.Editor.asmdef" t="Include" />
+          </e>
+          <e p="Runtime" t="Include">
+            <e p="GraphVisualizerClient.cs" t="Include" />
+            <e p="Unity.PlayableGraphVisualizer.asmdef" t="Include" />
+          </e>
+          <e p="Tests" t="Include">
+            <e p="Runtime" t="Include">
+              <e p="GraphVisualizerClientTests.cs" t="Include" />
+              <e p="Unity.PlayableGraphVisualizer.Tests.asmdef" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="io.github.ruccho.mukuro.core" t="Include">
           <e p="Editor" t="Include">
             <e p="Layout" t="Include">
@@ -64,10 +102,12 @@
                 <e p="LogVariableCommandEditor.cs" t="Include" />
                 <e p="NestEventScriptCommandEditor.cs" t="Include" />
                 <e p="SetVariableCommandEditor.cs" t="Include" />
+                <e p="SkipContainerCommandEditor.cs" t="Include" />
                 <e p="WaitCommandEditor.cs" t="Include" />
                 <e p="WaitForFramesCommandEditor.cs" t="Include" />
                 <e p="WhileVariableCommandEditor.cs" t="Include" />
               </e>
+              <e p="CommandEditorWorld.cs" t="Include" />
               <e p="CommandItem.cs" t="Include" />
               <e p="CommandListView.cs" t="Include" />
               <e p="CompositeVariableConditionPropertyDrawer.cs" t="Include" />
@@ -95,6 +135,7 @@
                 <e p="LogVariableCommand.cs" t="Include" />
                 <e p="NestEventScriptCommand.cs" t="Include" />
                 <e p="SetVariableCommand.cs" t="Include" />
+                <e p="SkipContainerCommand.cs" t="Include" />
                 <e p="WaitCommand.cs" t="Include" />
                 <e p="WaitForFramesCommand.cs" t="Include" />
                 <e p="WhileVariableCommand.cs" t="Include" />
@@ -178,8 +219,34 @@
             <e p="Mukuro.Dialog.asmdef" t="Include" />
           </e>
         </e>
+        <e p="io.github.ruccho.mukuro.timeline" t="Include">
+          <e p="Editor" t="Include">
+            <e p="Mukuro" t="Include">
+              <e p="CommandEditors" t="Include">
+                <e p="ControlTimelineCommandEditor.cs" t="Include" />
+                <e p="StartTimelineCommandEditor.cs" t="Include" />
+                <e p="WaitForSignalCommandEditor.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Mukuro.Timeline.Editors.asmdef" t="Include" />
+          </e>
+          <e p="Runtime" t="Include">
+            <e p="Mukuro" t="Include">
+              <e p="Commands" t="Include">
+                <e p="ControlTimelineCommand.cs" t="Include" />
+                <e p="StartTimelineCommand.cs" t="Include" />
+                <e p="WaitForSignalCommand.cs" t="Include" />
+              </e>
+              <e p="TimelineModule.cs" t="Include" />
+            </e>
+            <e p="Mukuro.Timeline.asmdef" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Unity.PlayableGraphVisualizer.csproj" t="IncludeRecursive" />
+      <e p="Unity.PlayableGraphVisualizer.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.PlayableGraphVisualizer.Tests.csproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>

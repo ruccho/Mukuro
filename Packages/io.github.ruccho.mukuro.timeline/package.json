@@ -1,0 +1,10 @@
+{
+    "name": "io.github.ruccho.mukuro.timeline",
+    "displayName": "Mukuro Timeline",
+    "version": "0.1.0",
+    "unity": "2019.3",
+    "description": "Mukuroは拡張性と編集効率を重視したイベント編集/再生システムです。TimelineパッケージにはUnity Timelineとの連携機能が含まれています。",
+    "dependencies": {
+        "io.github.ruccho.mukuro.core" : "0.1.0"
+    }
+}

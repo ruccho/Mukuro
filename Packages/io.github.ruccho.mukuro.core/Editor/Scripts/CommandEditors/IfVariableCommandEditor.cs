@@ -32,10 +32,17 @@ namespace Mukuro.Editors
         public override VisualElement CreateCommandEditorGUI()
         {
             var root = new VisualElement();
+            
             var condition = new PropertyField();
             condition.label = "条件";
             condition.bindingPath = CommandItem.CommandProperty.GetProperty().FindPropertyRelative("condition").propertyPath;
             root.Add(condition);
+            
+            var onFailed = new PropertyField();
+            onFailed.label = "評価失敗時の分岐";
+            onFailed.bindingPath = CommandItem.CommandProperty.GetChildProperty("onFailed").GetProperty().propertyPath;
+            root.Add(onFailed);
+            
             root.Bind(CommandItem.CommandProperty.SerializedObject);
             return root;
         }

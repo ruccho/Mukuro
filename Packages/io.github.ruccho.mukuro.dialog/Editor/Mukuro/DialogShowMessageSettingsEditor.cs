@@ -69,7 +69,10 @@ namespace Mukuro.Dialog.Editors
 
             var currentObject = property.objectReferenceValue;
 
-            var assets = Resources.FindObjectsOfTypeAll<SpeakerInfoAsset>().ToList();
+            var assetGuids = AssetDatabase.FindAssets("t:SpeakerInfoAsset");
+
+            var assets = assetGuids.Select(guid =>
+                AssetDatabase.LoadAssetAtPath<SpeakerInfoAsset>(AssetDatabase.GUIDToAssetPath(guid))).ToList();//Resources.FindObjectsOfTypeAll<SpeakerInfoAsset>().ToList();
             assets.Insert(0, null);
 
 

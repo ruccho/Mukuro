@@ -1,0 +1,18 @@
+{
+    "name": "Mukuro.Timeline.Editors",
+    "references": [
+        "GUID:a6d494cbe211056418cbeebd977327fc",
+        "GUID:1e517f7f9fc56204195783df4e167908",
+        "GUID:5a1946438582d6542bd9e41389df68d5",
+        "GUID:f06555f75b070af458a003d92f9efb00"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

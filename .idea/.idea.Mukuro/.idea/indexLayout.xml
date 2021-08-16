@@ -3,22 +3,35 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes>
+      <Path>Library/PackageCache/com.cysharp.unitask@2.2.5</Path>
       <Path>Library/PackageCache/com.neuecc.unirx@7.1.0</Path>
       <Path>Library/PackageCache/com.unity.2d.animation@3.2.1</Path>
+      <Path>Library/PackageCache/com.unity.2d.animation@3.2.5</Path>
       <Path>Library/PackageCache/com.unity.2d.common@2.0.2</Path>
+      <Path>Library/PackageCache/com.unity.2d.common@2.1.0</Path>
       <Path>Library/PackageCache/com.unity.2d.path@2.0.4</Path>
+      <Path>Library/PackageCache/com.unity.2d.path@2.1.0</Path>
       <Path>Library/PackageCache/com.unity.2d.pixel-perfect@2.0.4</Path>
+      <Path>Library/PackageCache/com.unity.2d.pixel-perfect@2.1.0</Path>
       <Path>Library/PackageCache/com.unity.2d.psdimporter@2.1.3</Path>
+      <Path>Library/PackageCache/com.unity.2d.psdimporter@2.1.6</Path>
       <Path>Library/PackageCache/com.unity.2d.spriteshape@3.0.10</Path>
+      <Path>Library/PackageCache/com.unity.2d.spriteshape@3.0.15</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.2.16</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.0</Path>
+      <Path>Library/PackageCache/com.unity.ext.nunit@1.0.6</Path>
       <Path>Library/PackageCache/com.unity.ide.rider@1.1.4</Path>
       <Path>Library/PackageCache/com.unity.ide.vscode@1.1.4</Path>
+      <Path>Library/PackageCache/com.unity.ide.vscode@1.2.3</Path>
       <Path>Library/PackageCache/com.unity.mathematics@1.1.0</Path>
       <Path>Library/PackageCache/com.unity.recorder@2.2.0-preview.4</Path>
+      <Path>Library/PackageCache/com.unity.recorder@2.5.5</Path>
       <Path>Library/PackageCache/com.unity.test-framework@1.1.13</Path>
+      <Path>Library/PackageCache/com.unity.test-framework@1.1.24</Path>
       <Path>Library/PackageCache/com.unity.textmeshpro@2.0.1</Path>
+      <Path>Library/PackageCache/com.unity.textmeshpro@2.1.4</Path>
       <Path>Library/PackageCache/com.unity.timeline@1.2.14</Path>
+      <Path>Library/PackageCache/com.unity.timeline@1.2.18</Path>
       <Path>Library/PackageCache/com.unity.ui.builder@0.11.1-preview</Path>
       <Path>Library/PackageCache/io.github.ruccho.exposedunityevent@c3dd7ff592</Path>
       <Path>ProjectSettings</Path>
@@ -30,6 +43,7 @@
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Recordings</Path>
+      <Path>Temp</Path>
       <Path>UIElementsSchema</Path>
       <Path>obj</Path>
     </explicitExcludes>

@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0ffaf0888c9c248ad21efddbd459aa, type: 3}
+  m_Name: Event00007_Timeline
+  m_EditorClassIdentifier: 
+  script:
+    CommandList:
+      commands:
+      - id: 0
+      - id: 1
+      - id: 2
+      - id: 3
+      - id: 4
+      - id: 5
+    WaitForAllCommands: 0
+  id: db754f6673372cd40998a30b2df0df1e
+  references:
+    version: 1
+    00000000:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: "\u30BF\u30A4\u30E0\u30E9\u30A4\u30F3\u3092\u958B\u59CB\uFF01"
+    00000001:
+      type: {class: StartTimelineCommand, ns: Mukuro.Timeline, asm: Mukuro.Timeline}
+      data:
+        synchronization: 0
+        enabled: 1
+        stopAction: 1
+        directorReference:
+          exposedName: dcccd591aa767bd468a1206e35652f99
+          defaultValue: {fileID: 0}
+        timelineAsset: {fileID: 11400000, guid: 6fc5896a64c229f4fb712eb201486ff8,
+          type: 2}
+        nestedCommands:
+          commands:
+          - id: 6
+          - id: 7
+    00000002:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: "\u30BF\u30A4\u30E0\u30E9\u30A4\u30F3\u304C\u7D42\u4E86\uFF01"
+    00000003:
+      type: {class: ControlTimelineCommand, ns: Mukuro.Timeline, asm: Mukuro.Timeline}
+      data:
+        synchronization: 0
+        enabled: 1
+        directorReference:
+          exposedName: 
+          defaultValue: {fileID: 0}
+        control: 1
+    00000004:
+      type: {class: ControlTimelineCommand, ns: Mukuro.Timeline, asm: Mukuro.Timeline}
+      data:
+        synchronization: 0
+        enabled: 1
+        directorReference:
+          exposedName: 
+          defaultValue: {fileID: 0}
+        control: 0
+    00000005:
+      type: {class: ControlTimelineCommand, ns: Mukuro.Timeline, asm: Mukuro.Timeline}
+      data:
+        synchronization: 0
+        enabled: 1
+        directorReference:
+          exposedName: 
+          defaultValue: {fileID: 0}
+        control: 2
+    00000006:
+      type: {class: WaitForSignalCommand, ns: Mukuro.Timeline, asm: Mukuro.Timeline}
+      data:
+        synchronization: 0
+        enabled: 1
+        target: {fileID: 11400000, guid: 8786f05d5bc40a048a7636cfdceefa3d, type: 2}
+        nestedCommands:
+          commands:
+          - id: 8
+    00000007:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: "\u30A4\u30D9\u30F3\u30C8\u518D\u958B"
+    00000008:
+      type: {class: LogCommand, ns: Mukuro, asm: Mukuro}
+      data:
+        synchronization: 0
+        enabled: 1
+        message: "\u30B7\u30B0\u30CA\u30EB\u3092\u5F85\u3061\u53D7\u3051\u4E2D\u2026\u2026"

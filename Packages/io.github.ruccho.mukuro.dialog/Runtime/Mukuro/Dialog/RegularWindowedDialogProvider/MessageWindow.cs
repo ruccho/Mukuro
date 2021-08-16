@@ -107,9 +107,9 @@ namespace Mukuro.Dialog
             CancelCurrentFaceSpriteLoading();
             FaceSpriteLoadingCancellation = new CancellationTokenSource();
 
-            Debug.Log("Start Loading");
+            //Debug.Log("Start Loading");
             LoadFaceSpriteAsync(settings, FaceSpriteLoadingCancellation.Token).Forget();
-            Debug.Log("Continue...");
+            //Debug.Log("Continue...");
 
             SetState(MessageWindowState.Speaking, onNext);
         }
@@ -132,7 +132,7 @@ namespace Mukuro.Dialog
                     loaded = await settings.SpeakerInfo.GetFaceSpriteAsync(settings.Face, cancellationToken);
                 }
 
-                Debug.Log("Loaded");
+                //Debug.Log("Loaded");
 
                 if (cancellationToken.IsCancellationRequested)
                 {

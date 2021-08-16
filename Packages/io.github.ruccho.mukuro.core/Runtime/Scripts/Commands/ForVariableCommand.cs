@@ -9,7 +9,7 @@ namespace Mukuro
     public class ForVariableCommand : EventCommand
     {
         [SerializeField] private bool waitForAllCommand = default;
-        [SerializeField] private VariableReferenceTypeSelector count = default;
+        [SerializeReference, VariableReference.TypeSelectableAttribute] private VariableReference count = default;
         [SerializeField] private EventCommandList routine = default;
 
         private int counter = 0;
@@ -23,7 +23,7 @@ namespace Mukuro
         private void UpdateLoop(EventExecutionContext context, CommandExecutionHandle handle)
         {
             counter++;
-            if (count.Variable.Evaluate(context, out object result))
+            if (count.Evaluate(context, out object result))
             {
                 if (result is IComparable resultComparable && counter.CompareTo(resultComparable) < 0)
                 {

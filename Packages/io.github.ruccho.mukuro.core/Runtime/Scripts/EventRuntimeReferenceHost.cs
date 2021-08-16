@@ -96,11 +96,7 @@ namespace Mukuro
 
         private static void RemoveSceneEntry(Scene scene)
         {
-            if (!registry.ContainsKey(scene))
-            {
-                throw new InvalidOperationException($"Scene \"{scene.name}\" is not loaded");
-            }
-            else
+            if (registry.ContainsKey(scene))
             {
                 registry.Remove(scene);
             }

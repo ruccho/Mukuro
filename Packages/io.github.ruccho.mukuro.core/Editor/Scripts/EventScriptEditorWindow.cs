@@ -22,12 +22,16 @@ namespace Mukuro.Editors
 
         private static void GetSkins()
         {
-            //UnityEditor.dllを取得
-            var assembly = typeof(Editor).Assembly;
+            //UnityEditor.UIElementsのアセンブリを取得
+            var assembly = typeof(Toolbar).Assembly;
 
             //UIElementsEditorUtilityのTypeを取得
             var type = assembly.GetType("UnityEditor.UIElements.UIElementsEditorUtility");
-            if (type == null) return;
+            if (type == null)
+            {
+                Debug.LogWarning($"Type UnityEditor.UIElements.UIElementsEditorUtility is missing.");
+                return;
+            }
 
             //StyleSheetを格納するフィールドを取得
             var darkField = type.GetField("s_DefaultCommonDarkStyleSheet",
@@ -104,6 +108,7 @@ namespace Mukuro.Editors
             rootVisualElement.styleSheets.Clear();
             rootVisualElement.styleSheets.Add(defaultCommonDarkStyleSheet);
 
+            
             root.style.flexGrow = 1f;
 
             SerializedObject sObj;
@@ -171,8 +176,8 @@ namespace Mukuro.Editors
             commandList.Add(rootCommandListView);
 
             //コマンド追加メニューの構成
-            var addCommandList = root.Q<ListView>("AddCommandList");
-            addCommandList.contentContainer.Clear();
+            var addCommandList = root.Q<ScrollView>("AddCommandList");
+            addCommandList.Clear();
 
             //-定義済みコマンドを列挙
             Dictionary<EventCommandAttribute, Type> definedCommands = new Dictionary<EventCommandAttribute, Type>();
@@ -272,10 +277,13 @@ namespace Mukuro.Editors
 
         private void OnItemSelected(CommandItem item)
         {
-            var editor = item.Editor;
             var commandEditor = rootVisualElement.Q<VisualElement>("CommandEditor");
             if (commandEditor == null) return;
             commandEditor.Clear();
+
+            if (item == null) return;
+            
+            var editor = item.Editor;
             var customCommandEditor = editor.CreateCommandEditorGUI();
             commandEditor.Add(customCommandEditor);
         }
